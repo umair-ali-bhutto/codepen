@@ -4,12 +4,12 @@
   }
   
   *::-webkit-scrollbar-track {
-    background-color: black;
+    background-color: white;  
   
   }
   
   *::-webkit-scrollbar-thumb {
-    background: white;
+    background: black;
     border-radius: 100vw;
   
   }
@@ -17,8 +17,8 @@
   
   /* scroll bar for firefox*/
   * {
-    scrollbar-width: auto;
-    scrollbar-color: black white;
+    scrollbar-width: thin;
+    scrollbar-color: white black;
   }
   
   
@@ -188,7 +188,10 @@
   
   
   .mt-3 {
-    margin-top: 1rem !important
+    margin-top: 1.5rem !important
+  }
+  .mb-3 {
+    margin-bottom: 1.5rem !important
   }
   
   .m-4 {
@@ -267,7 +270,7 @@
   
   .card-wrapper:hover {
     border-radius: 25px;
-    box-shadow: rgb(122, 122, 122) 0px 0px 60px -1px;
+    box-shadow: rgb(122, 122, 122) 0px 0px 50px -10px;
   
   }
   
@@ -285,6 +288,21 @@
   .inner-route:hover {
     color: white;
     background-color: black;
+    box-shadow: rgb(123, 123, 123) 0px 20px 10px -11px;
+  }
+
+  .inner-route2 {
+    border-radius: 25px;
+    background-color: white;
+    white-space: nowrap;
+    color: black;
+    padding: 2% 20%;
+    transition: 0.5s;
+    font-family: barlow-medium;
+  }
+  
+  .inner-route2:hover {
+    outline: 1px black solid;
     box-shadow: rgb(123, 123, 123) 0px 20px 10px -11px;
   }
   

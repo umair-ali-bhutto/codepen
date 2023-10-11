@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+}
+
+.viewport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.viewport .view {
+  --rotateX: 0deg;
+  --rotateY: 0deg;
+  --rotateZ: 0deg;
+  width: inherit;
+  height: inherit;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transform: rotatex(calc(var(--rotateX) * -1)) rotatey(calc(var(--rotateY) * -1));
+  align-items: center;
+}
+.viewport .view .plane {
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  transform-style: preserve-3d;
+  transform: rotatex(45deg);
+}/*# sourceMappingURL=style.css.map */
