@@ -1,0 +1,14 @@
+{
+  "name": "css3dcubes",
+  "version": "1.0.0",
+  "description": "testing",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "umair ali bhutto",
+  "license": "ISC"
+}
