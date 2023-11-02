@@ -1,0 +1,128 @@
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),90%,40%);
+	--fg: hsl(0,0%,100%);
+	--trans-dur: 0.3s;
+	font-size: calc(16px + (32 - 16) * (100vw - 320px) / (2560 - 320));
+}
+body {
+	background-color: var(--bg);
+	color: var(--fg);
+	display: flex;
+	font: 1em/1.5 Rubik, sans-serif;
+	height: 100vh;
+	transition:
+		background-color var(--trans-dur),
+		color var(--trans-dur);
+}
+.clock {
+	--hrAngle: 0;
+	--minAngle: 0;
+	border-radius: 50%;
+	margin: auto;
+	outline: transparent;
+	position: relative;
+	width: 12em;
+	height: 12em;
+	transform: rotateX(30deg) rotateY(-30deg) rotateZ(30deg);
+	transform-style: preserve-3d;
+	transition: transform var(--trans-dur) cubic-bezier(0.42,0,0.58,1);
+	-webkit-tap-highlight-color: transparent;
+}
+.clock:focus-visible,
+.clock:hover {
+	transform: rotateX(0) rotateY(0) rotateZ(0);
+}
+.clock__digits {
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	line-height: 1;
+	margin-top: 2.25em;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.clock__digit-group {
+	margin: 0 0.1em;
+	width: 2ch;
+}
+.clock__digit-group[data-unit="h"] {
+	text-align: right;
+}
+.clock__digit-group--small {
+	font-size: 0.75em;
+}
+.clock__hand,
+.clock__layer,
+.clock__ring {
+	position: absolute;
+}
+.clock__hand {
+	bottom: calc(50% - 0.5em);
+	left: calc(50% - 0.5em);
+	width: 1em;
+	mix-blend-mode: difference;
+	perspective: 4.25em;
+	transform-origin: 0.5em calc(100% - 0.5em);
+}
+.clock__hand--hr {
+	height: 2.75em;
+	transform: rotate(var(--hrAngle)) translateY(-2em);
+}
+.clock__hand--min {
+	height: 3.75em;
+	transform: rotate(var(--minAngle)) translateY(-2em);
+}
+.clock__hand:before {
+	background-color: var(--fg);
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	transform: rotateX(-30deg);
+	transform-origin: 50% 100%;
+}
+.clock__hand--hr:before {
+	border-radius: 0.5em 0.5em 0.5em 0.5em / 0.5em 0.5em 0.75em 0.75em;
+}
+.clock__hand--min:before {
+	border-radius: 0 0 0.5em 0.5em / 0 0 0.75em 0.75em;
+}
+.clock__layer,
+.clock__ring {
+	border-radius: 50%;
+	inset: 0;
+}
+.clock__layer--face {
+	transform: translateZ(3.75em);
+}
+.clock__layer--img {
+	background: url("https://assets.codepen.io/416221/leaves.jpg") 0 0 / 100% 100%;
+	transform: translateZ(-3.75em);
+}
+.clock__layer--profile {
+	transform: translateZ(11em);
+}
+.clock__layer--shade {
+	background-color: hsla(var(--hue),90%,10%,0.6);
+}
+.clock__profile {
+	background-color: hsl(var(--hue),10%,50%);
+	border: 0;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0.25em hsla(var(--hue),90%,10%,0.6);
+	display: block;
+	margin: 7.75em auto 0 auto;
+	width: 2em;
+	height: 2em;
+}
+.clock__ring {
+	box-shadow: 0 0 0 0.625em var(--fg) inset;
+}
