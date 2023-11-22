@@ -31,112 +31,121 @@
     <title>Code Pens</title>
     <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="styles.css" />
-
+    <script src="script.js"></script>
 
 
 </head>
 
 <body>
-    <div id="blob"></div>
-    
+    <!-- WILL TRY BLOB EFFECT -->
+    <!-- <div id="blob"></div> -->
+
     <!-- Routes To CodePens -->
     <section class="m-4">
         <div class="container-fluid">
-    <h1>Trying Video Website is Under Heavy Process. So Kindly Wait</h1>
+            <h1>Trying Video Website is Under Heavy Process. So Kindly Wait</h1>
 
             <div data-wow-duration="1.5s" data-wow-delay="0.5s" class="wow bounceInUp">
                 <div class="row">
 
 
-
-                    
-<style>
-
-@keyframes rotate {
-  from {
-    rotate: 0deg;
-  }
-  
-  50% {
-     rotate: 360deg;
-     border-radius: 50%;
-  }
-  
-  to {
-    rotate: 0deg;
-  }
-}
-
-
-    #blob {
-        translate: 70% 150%;
-        z-index: 2;
-  height: 1vmax;
-  aspect-ratio: 1;
-  position: absolute;
-  border-radius: 0px;
-  animation: rotate 15s ease-in infinite;
-
-
-}
-
-@media (max-width:576px) {
-    #blob {display: none;}
-  }
-
-
-</style>
-
-<script>
-    const blob = document.getElementById("blob");
-
-window.onpointermove = event => { 
-  const { clientX, clientY } = event;
-  
-  blob.animate({
-    left: `${clientX}px`,
-    top: `${clientY + window.scrollY}px`
-  }, { duration: 3000, fill: "forwards" });
-}
-
-
-
-var r = 255, g = 0, b = 0;
-
-setInterval(function () {
-  if (r > 0 && b == 0) {
-    r--;
-    g++;
-  }
-  if (g > 0 && r == 0) {
-    g--;
-    b++;
-  }
-  if (b > 0 && g == 0) {
-    r++;
-    b--;
-  }
-  blob.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
-}, 100);
-</script>
-
-
-
-
-                    
-                    
                     <!-- Trying videos -->
+
+                    <style>
+                      @keyframes falling {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.video-container {
+  position: relative;
+    }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* Allow clicks to go through the overlay */
+}
+
+.screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+                    </style>
+
+                    <script>
+                       function startAnimation() {
+  const overlay = document.getElementById("overlay");
+  const video = document.getElementById("video");
+
+  overlay.style.animation = "falling 2s forwards";
+  video.play();
+
+  overlay.addEventListener("animationend", function () {
+    overlay.style.display = "none";
+    video.controls = true;
+  });
+}
+
+
+                    </script>
+
                     <div class="col-md-3 col-sm-12 col-lg-3">
                         <div class="card-wrapper text-center">
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
-                              
-                                    <video  controls autoplay muted loop>
-                                        <source
-                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                                            type="video/mp4">
-                                        Your browser does not support the video tag.
+
+                                <div class="video-container" onmouseover="startAnimation()">
+                                    <div class="overlay" id="overlay">
+                                      <img src="logo.png" alt="Screenshot" class="screenshot">
+                                    </div>
+                                    <video muted loop id="video">
+                                      <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
                                     </video>
-                      
+                                </div>
+
+                                <h4 class="card-text">TEST VIDEO</h4>
+                                <div data-tilt class="text-center mt-3" data-tilt>
+                                    <a class="inner-route" target="_blank" aria-label="Demo"
+                                        href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
+                                </div>
+                                <div data-tilt class="text-center mt-3 mb-3" data-tilt>
+                                    <a class="inner-route2" target="_blank" aria-label="Created By"
+                                        href="https://codepen.io/DawidKrajewski">Visit Creator</a>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="col-md-3 col-sm-12 col-lg-3">
+                        <div class="card-wrapper text-center">
+                            <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
+
+                                <video controls autoplay muted loop>
+                                    <source
+                                        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                        type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+
                                 <h4 class="card-text">Rotate Clock CSS Only Now JS</h4>
                                 <div data-tilt class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Demo"
@@ -154,14 +163,14 @@ setInterval(function () {
                     <div class="col-md-3 col-sm-12 col-lg-3">
                         <div class="card-wrapper text-center">
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
-                              
-                                    <video  controls autoplay muted loop>
-                                        <source
-                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                                            type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                      
+
+                                <video controls autoplay muted loop>
+                                    <source
+                                        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                        type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+
                                 <h4 class="card-text">Rotate Clock CSS Only Now JS</h4>
                                 <div data-tilt class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Demo"
@@ -179,14 +188,14 @@ setInterval(function () {
                     <div class="col-md-3 col-sm-12 col-lg-3">
                         <div class="card-wrapper text-center">
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
-                              
-                                    <video  controls   loop>
-                                        <source
-                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                                            type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                      
+
+                                <video controls loop>
+                                    <source
+                                        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                        type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+
                                 <h4 class="card-text">Rotate Clock CSS Only Now JS</h4>
                                 <div data-tilt class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Demo"
@@ -204,14 +213,14 @@ setInterval(function () {
                     <div class="col-md-3 col-sm-12 col-lg-3">
                         <div class="card-wrapper text-center">
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
-                              
-                                    <video  controls  loop>
-                                        <source
-                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                                            type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                      
+
+                                <video controls loop>
+                                    <source
+                                        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                        type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+
                                 <h4 class="card-text">Rotate Clock CSS Only Now JS</h4>
                                 <div data-tilt class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Demo"
@@ -223,7 +232,7 @@ setInterval(function () {
                                 </div>
                             </span>
                         </div>
-                    </div>  
+                    </div>
 
 
 
