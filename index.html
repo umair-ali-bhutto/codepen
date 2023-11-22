@@ -3,21 +3,236 @@
 <!-- oncontextmenu="return false"  -->
 
 <head>
-    <title>Code Pens</title>
+    <!-- META Tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="This website is developed by Umair Ali Bhutto" />
     <meta name="author" content="Umair Ali Bhutto">
+
+    <!-- OPENGRAPH -->
+    <meta property="og:title" content="Code Pen Collections">
+    <meta property="og:description"
+        content="Explore a collection of inspiring CodePens from talented creators! My webpage showcases a variety of interactive demos contributed by different authors on CodePen. Click through to experience the creativity and skill of each developer. Don't forget to visit their CodePen profiles for more amazing work. #CodePen #WebDevelopment #InteractiveDesign">
+    <meta property="og:image" content="logo.png">
+
+    <!-- TWITTER AND OTHER -->
+    <meta name="twitter:title" content="Code Pen Collections">
+    <meta name="twitter:description"
+        content="Explore a collection of inspiring CodePens from talented creators! My webpage showcases a variety of interactive demos contributed by different authors on CodePen. Click through to experience the creativity and skill of each developer. Don't forget to visit their CodePen profiles for more amazing work. #CodePen #WebDevelopment #InteractiveDesign">
+    <meta name="twitter:image" content="logo.png">
+
+    <meta name="keywords"
+        content="CodePen, HTML, CSS, JavaScript, Web Development, Umair Ali, Interactive Demos, Creative Coding, Collections, Authors, DawidKrajewski, Alencoder_75, arturs, ania221b, argyleink, chasekaiser, Codepixl, cassidoo, coding, dobro123, Dillo, ecemgo, himalayasingh, jkantner, jessejburton, mallendeo, neilcarpenter, Profesor08, petebarr, rabinlc, robinselmer, Skagoo, sandil, YusukeNakaya, ">
+
+    <meta name="theme-color" content="#ffffff">
+
+
+
+    <title>Code Pens</title>
     <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="styles.css" />
+
+
+
 </head>
 
 <body>
+    <div id="blob"></div>
+    
     <!-- Routes To CodePens -->
     <section class="m-4">
         <div class="container-fluid">
+    <h1>Trying Video Website is Under Heavy Process. So Kindly Wait</h1>
+
             <div data-wow-duration="1.5s" data-wow-delay="0.5s" class="wow bounceInUp">
                 <div class="row">
+
+
+
+                    
+<style>
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  
+  50% {
+     rotate: 360deg;
+     border-radius: 50%;
+  }
+  
+  to {
+    rotate: 0deg;
+  }
+}
+
+
+    #blob {
+        translate: 70% 150%;
+        z-index: 2;
+  height: 1vmax;
+  aspect-ratio: 1;
+  position: absolute;
+  border-radius: 0px;
+  animation: rotate 15s ease-in infinite;
+
+
+}
+
+@media (max-width:576px) {
+    #blob {display: none;}
+  }
+
+
+</style>
+
+<script>
+    const blob = document.getElementById("blob");
+
+window.onpointermove = event => { 
+  const { clientX, clientY } = event;
+  
+  blob.animate({
+    left: `${clientX}px`,
+    top: `${clientY + window.scrollY}px`
+  }, { duration: 3000, fill: "forwards" });
+}
+
+
+
+var r = 255, g = 0, b = 0;
+
+setInterval(function () {
+  if (r > 0 && b == 0) {
+    r--;
+    g++;
+  }
+  if (g > 0 && r == 0) {
+    g--;
+    b++;
+  }
+  if (b > 0 && g == 0) {
+    r++;
+    b--;
+  }
+  blob.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+}, 100);
+</script>
+
+
+
+
+                    
+                    
+                    <!-- Trying videos -->
+                    <div class="col-md-3 col-sm-12 col-lg-3">
+                        <div class="card-wrapper text-center">
+                            <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
+                              
+                                    <video  controls autoplay muted loop>
+                                        <source
+                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                      
+                                <h4 class="card-text">Rotate Clock CSS Only Now JS</h4>
+                                <div data-tilt class="text-center mt-3" data-tilt>
+                                    <a class="inner-route" target="_blank" aria-label="Demo"
+                                        href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
+                                </div>
+                                <div data-tilt class="text-center mt-3 mb-3" data-tilt>
+                                    <a class="inner-route2" target="_blank" aria-label="Created By"
+                                        href="https://codepen.io/DawidKrajewski">Visit Creator</a>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-12 col-lg-3">
+                        <div class="card-wrapper text-center">
+                            <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
+                              
+                                    <video  controls autoplay muted loop>
+                                        <source
+                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                      
+                                <h4 class="card-text">Rotate Clock CSS Only Now JS</h4>
+                                <div data-tilt class="text-center mt-3" data-tilt>
+                                    <a class="inner-route" target="_blank" aria-label="Demo"
+                                        href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
+                                </div>
+                                <div data-tilt class="text-center mt-3 mb-3" data-tilt>
+                                    <a class="inner-route2" target="_blank" aria-label="Created By"
+                                        href="https://codepen.io/DawidKrajewski">Visit Creator</a>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-12 col-lg-3">
+                        <div class="card-wrapper text-center">
+                            <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
+                              
+                                    <video  controls   loop>
+                                        <source
+                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                      
+                                <h4 class="card-text">Rotate Clock CSS Only Now JS</h4>
+                                <div data-tilt class="text-center mt-3" data-tilt>
+                                    <a class="inner-route" target="_blank" aria-label="Demo"
+                                        href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
+                                </div>
+                                <div data-tilt class="text-center mt-3 mb-3" data-tilt>
+                                    <a class="inner-route2" target="_blank" aria-label="Created By"
+                                        href="https://codepen.io/DawidKrajewski">Visit Creator</a>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-12 col-lg-3">
+                        <div class="card-wrapper text-center">
+                            <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
+                              
+                                    <video  controls  loop>
+                                        <source
+                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                      
+                                <h4 class="card-text">Rotate Clock CSS Only Now JS</h4>
+                                <div data-tilt class="text-center mt-3" data-tilt>
+                                    <a class="inner-route" target="_blank" aria-label="Demo"
+                                        href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
+                                </div>
+                                <div data-tilt class="text-center mt-3 mb-3" data-tilt>
+                                    <a class="inner-route2" target="_blank" aria-label="Created By"
+                                        href="https://codepen.io/DawidKrajewski">Visit Creator</a>
+                                </div>
+                            </span>
+                        </div>
+                    </div>  
+
+
+
+
+
+
+
+
+
 
                     <div class="col-md-3 col-sm-12 col-lg-3">
                         <div data-tilt class="card-wrapper text-center">
@@ -386,7 +601,7 @@
                             </a>
                         </div>
                     </div>
-                   
+
 
                     <div class="col-md-3 col-sm-12 col-lg-3">
                         <div data-tilt class="card-wrapper text-center">
@@ -405,7 +620,7 @@
                         </div>
                     </div>
 
-                    
+
 
                     <div class="col-md-3 col-sm-12 col-lg-3">
                         <div data-tilt class="card-wrapper text-center">
@@ -529,7 +744,6 @@
                         </div>
                     </div>
 
-                    
 
 
 
@@ -548,11 +762,12 @@
 
 
 
-                    
 
 
 
-                    
+
+
+
 
 
 
