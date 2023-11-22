@@ -8,7 +8,7 @@ const seconds = now.getSeconds();
 // ALL Varibles
 var hour = hours;
 var minute = minutes;
-var second = 0;
+var second = seconds;
 
 // var radius = '75px';
 var radius = 75;
@@ -178,7 +178,7 @@ function assignAnimations() {
   }
 
   for (let i = 1; i <= 10; i++) {
-    let index = i + minuteTens;
+    let index = i + minuteOnes;
     if (index > 10) { index = index - 10; }
     temp = -((10 * secondTens) + secondOnes);
     CSS += `.minuteOnes li:nth-child(${index}){
@@ -188,7 +188,7 @@ function assignAnimations() {
   }
 
   for (let i = 1; i <= 6; i++) {
-    let index = i + minuteTens;
+    let index = i + secondTens;
     if (index > 6) { index = index - 6; }
     temp = -(secondOnes);
     CSS += `.secondTens li:nth-child(${index}){
@@ -198,7 +198,7 @@ function assignAnimations() {
   }
 
   for (let i = 1; i <= 10; i++) {
-    let index = i + minuteTens;
+    let index = i + secondOnes;
     if (index > 10) { index = index - 10; }
     CSS += `.secondOnes li:nth-child(${index}){
       animation:ten${i} 10s cubic-bezier(0.9, 0, 0.9, 0) infinite;
