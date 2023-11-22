@@ -6,26 +6,34 @@
     <!-- META Tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="This website is developed by Umair Ali Bhutto" />
+    <meta name="description"
+        content="Explore a collection of inspiring CodePens from talented creators! My webpage showcases a variety of interactive demos contributed by different authors on CodePen. Click through to experience the creativity and skill of each developer. Don't forget to visit their CodePen profiles for more amazing work. #CodePen #WebDevelopment #InteractiveDesign. This website is developed by Umair Ali Bhutto" />
     <meta name="author" content="Umair Ali Bhutto">
 
     <!-- OPENGRAPH -->
-    <meta property="og:title" content="Code Pen Collections">
+    <meta property="og:title" content="✨ Discover the Power of Pens! 🚀">
     <meta property="og:description"
-        content="Explore a collection of inspiring CodePens from talented creators! My webpage showcases a variety of interactive demos contributed by different authors on CodePen. Click through to experience the creativity and skill of each developer. Don't forget to visit their CodePen profiles for more amazing work. #CodePen #WebDevelopment #InteractiveDesign">
-    <meta property="og:image" content="logo.png">
-
+        content="🔥 Unleash the potential of CodePen. 🔥 Explore a collection of inspiring CodePens from talented creators! #CodePen 💻">
+    <meta property="og:image" content="https://umair-ali-bhutto.github.io/assets/CodePenIcon/logo.png">
+    <meta name="og:type" content="website" />
     <!-- TWITTER AND OTHER -->
-    <meta name="twitter:title" content="Code Pen Collections">
+    <meta name="twitter:title" content="✨ Discover the Power of Pens! 🚀">
     <meta name="twitter:description"
-        content="Explore a collection of inspiring CodePens from talented creators! My webpage showcases a variety of interactive demos contributed by different authors on CodePen. Click through to experience the creativity and skill of each developer. Don't forget to visit their CodePen profiles for more amazing work. #CodePen #WebDevelopment #InteractiveDesign">
-    <meta name="twitter:image" content="logo.png">
+        content="🔥 Unleash the potential of CodePen. 🔥 Explore a collection of inspiring CodePens from talented creators! #CodePen 💻">
+    <meta name="twitter:image" content="https://umair-ali-bhutto.github.io/assets/CodePenIcon/logo.png">
 
     <meta name="keywords"
         content="CodePen, HTML, CSS, JavaScript, Web Development, Umair Ali, Interactive Demos, Creative Coding, Collections, Authors, DawidKrajewski, Alencoder_75, arturs, ania221b, argyleink, chasekaiser, Codepixl, cassidoo, coding, dobro123, Dillo, ecemgo, himalayasingh, jkantner, jessejburton, mallendeo, neilcarpenter, Profesor08, petebarr, rabinlc, robinselmer, Skagoo, sandil, YusukeNakaya, ">
 
     <meta name="theme-color" content="#ffffff">
+    <meta name="application-name" content="Code Pen" />
 
+    <!-- The <meta name="apple-mobile-web-app-capable"> meta tag is used in HTML to control the behavior of a web application when it is added to the home screen on an Apple iOS device. Specifically, it's used to indicate whether the web application should run in standalone mode, i.e., without the browser chrome. -->
+    <meta name="apple-mobile-web-app-capable" content="no" />
+    <!-- The <meta name="msapplication-TileColor"> meta tag is used to define the background color of the tile on the Windows Start screen when a user pins a website to the Start menu in Internet Explorer and Microsoft Edge. This tag is specific to Microsoft browsers. -->
+    <meta name="msapplication-TileColor" content="#3498db" />
+    <!-- The <meta name="msapplication-TileImage"> meta tag is used to specify the path to the image file that will be used as the tile icon on the Windows Start screen when a user pins a website to the Start menu in Internet Explorer and Microsoft Edge. This tag is specific to Microsoft browsers. -->
+    <meta name="msapplication-TileImage" content="https://umair-ali-bhutto.github.io/assets/CodePenIcon/logo.png" />
 
 
     <title>Code Pens</title>
@@ -52,52 +60,53 @@
                     <!-- Trying videos -->
 
                     <style>
-                      @keyframes falling {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-}
+                        @keyframes falling {
+                            0% {
+                                transform: translateY(0);
+                            }
 
-.video-container {
-  position: relative;
-    }
+                            100% {
+                                transform: translateY(100%);
+                                opacity: 0;
+                            }
+                        }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none; /* Allow clicks to go through the overlay */
-}
+                        .video-container {
+                            position: relative;
+                        }
 
-.screenshot {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.5s ease;
-}
+                        .overlay {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+                            pointer-events: none;
+                            /* Allow clicks to go through the overlay */
+                        }
 
+                        .screenshot {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: opacity 0.5s ease;
+                        }
                     </style>
 
                     <script>
-                       function startAnimation() {
-  const overlay = document.getElementById("overlay");
-  const video = document.getElementById("video");
+                        function startAnimation() {
+                            const overlay = document.getElementById("overlay");
+                            const video = document.getElementById("video");
 
-  overlay.style.animation = "falling 2s forwards";
-  video.play();
+                            overlay.style.animation = "falling 2s forwards";
+                            video.play();
 
-  overlay.addEventListener("animationend", function () {
-    overlay.style.display = "none";
-    video.controls = true;
-  });
-}
+                            overlay.addEventListener("animationend", function () {
+                                overlay.style.display = "none";
+                                video.controls = true;
+                            });
+                        }
 
 
                     </script>
@@ -108,11 +117,13 @@
 
                                 <div class="video-container" onmouseover="startAnimation()">
                                     <div class="overlay" id="overlay">
-                                      <img src="logo.png" alt="Screenshot" class="screenshot">
+                                        <img src="logo.png" alt="Screenshot" class="screenshot">
                                     </div>
                                     <video muted loop id="video">
-                                      <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
-                                      Your browser does not support the video tag.
+                                        <source
+                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
                                     </video>
                                 </div>
 
