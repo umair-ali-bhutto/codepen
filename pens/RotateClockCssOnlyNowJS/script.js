@@ -276,7 +276,7 @@ ul li {
 }
 
 
-document.addEventListener('DOMContentLoaded', function () {
+// document.addEventListener('DOMContentLoaded', function () {
 
   generateAnimation("ten", 10);
   generateAnimation("six", 6);
@@ -289,5 +289,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
   console.log(styleElement.innerHTML);
   document.head.appendChild(styleElement);
-});
+// });
 
