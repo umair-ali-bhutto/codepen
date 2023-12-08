@@ -122,6 +122,35 @@
                             }
 
                         }
+
+
+
+                        function handleIntersection(entries, observer) {
+                            entries.forEach(entry => {
+                                const video = entry.target.querySelector('video');
+
+                                if (entry.isIntersecting) {
+                                    if (video.paused) {
+                                        video.play();
+                                    }
+                                } else {
+                                    if (!video.paused) {
+                                        video.pause();
+                                        //video.currentTime = 0;
+                                    }
+                                }
+                            });
+                        }
+
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const videoContainers = document.querySelectorAll('.video-container');
+
+                            const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+
+                            videoContainers.forEach(container => {
+                                observer.observe(container);
+                            });
+                        });
                     </script>
 
                     <div class="col-md-3 col-sm-12 col-lg-3">
@@ -187,6 +216,36 @@
                     </div>
 
 
+                    <div class="col-md-3 col-sm-12 col-lg-3">
+                        <div class="card-wrapper text-center">
+                            <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
+
+                                <div id="videoContainer3" class="video-container"
+                                    onmouseover="startAnimation('videoContainer3')">
+                                    <div class="overlay" id="overlay">
+                                        <img src="https://pbblogassets.s3.amazonaws.com/uploads/2019/10/14155914/aspectRatioEvolution_lauterbrunnen-1-1.jpg"
+                                            alt="Screenshot" class="screenshot">
+                                    </div>
+                                    <video muted loop id="video">
+                                        <source
+                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <h4 class="card-text">TEST VIDEO</h4>
+                                <div data-tilt class="text-center mt-3" data-tilt>
+                                    <a class="inner-route" target="_blank" aria-label="Demo"
+                                        href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
+                                </div>
+                                <div data-tilt class="text-center mt-3 mb-3" data-tilt>
+                                    <a class="inner-route2" target="_blank" aria-label="Created By"
+                                        href="https://codepen.io/DawidKrajewski">Visit Creator</a>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
 
 
 
@@ -212,7 +271,116 @@
 
 
 
-                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -490,6 +658,235 @@
                         </div>
                     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-md-3 col-sm-12 col-lg-3">
+                        <div class="card-wrapper text-center">
+                            <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
+
+                                <div id="videoContainer4" class="video-container"
+                                    onmouseover="startAnimation('videoContainer4')">
+                                    <div class="overlay" id="overlay">
+                                        <img src="https://pbblogassets.s3.amazonaws.com/uploads/2019/10/14155914/aspectRatioEvolution_lauterbrunnen-1-1.jpg"
+                                            alt="Screenshot" class="screenshot">
+                                    </div>
+                                    <video muted loop id="video">
+                                        <source
+                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <h4 class="card-text">TEST VIDEO</h4>
+                                <div data-tilt class="text-center mt-3" data-tilt>
+                                    <a class="inner-route" target="_blank" aria-label="Demo"
+                                        href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
+                                </div>
+                                <div data-tilt class="text-center mt-3 mb-3" data-tilt>
+                                    <a class="inner-route2" target="_blank" aria-label="Created By"
+                                        href="https://codepen.io/DawidKrajewski">Visit Creator</a>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-lg-3">
+                        <div class="card-wrapper text-center">
+                            <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
+
+                                <div id="videoContainer5" class="video-container"
+                                    onmouseover="startAnimation('videoContainer5')">
+                                    <div class="overlay" id="overlay">
+                                        <img src="https://pbblogassets.s3.amazonaws.com/uploads/2019/10/14155914/aspectRatioEvolution_lauterbrunnen-1-1.jpg"
+                                            alt="Screenshot" class="screenshot">
+                                    </div>
+                                    <video muted loop id="video">
+                                        <source
+                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <h4 class="card-text">TEST VIDEO</h4>
+                                <div data-tilt class="text-center mt-3" data-tilt>
+                                    <a class="inner-route" target="_blank" aria-label="Demo"
+                                        href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
+                                </div>
+                                <div data-tilt class="text-center mt-3 mb-3" data-tilt>
+                                    <a class="inner-route2" target="_blank" aria-label="Created By"
+                                        href="https://codepen.io/DawidKrajewski">Visit Creator</a>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <div class="col-md-3 col-sm-12 col-lg-3">
                         <div data-tilt class="card-wrapper text-center">
                             <a class="card-route" target="_blank" href="pens/PureCssToggleButtons/index.html">
@@ -754,6 +1151,182 @@
                             </a>
                         </div>
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-md-3 col-sm-12 col-lg-3">
+                        <div class="card-wrapper text-center">
+                            <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
+
+                                <div id="videoContainer6" class="video-container"
+                                    onmouseover="startAnimation('videoContainer6')">
+                                    <div class="overlay" id="overlay">
+                                        <img src="https://pbblogassets.s3.amazonaws.com/uploads/2019/10/14155914/aspectRatioEvolution_lauterbrunnen-1-1.jpg"
+                                            alt="Screenshot" class="screenshot">
+                                    </div>
+                                    <video muted loop id="video">
+                                        <source
+                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <h4 class="card-text">TEST VIDEO</h4>
+                                <div data-tilt class="text-center mt-3" data-tilt>
+                                    <a class="inner-route" target="_blank" aria-label="Demo"
+                                        href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
+                                </div>
+                                <div data-tilt class="text-center mt-3 mb-3" data-tilt>
+                                    <a class="inner-route2" target="_blank" aria-label="Created By"
+                                        href="https://codepen.io/DawidKrajewski">Visit Creator</a>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-lg-3">
+                        <div class="card-wrapper text-center">
+                            <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
+
+                                <div id="videoContainer7" class="video-container"
+                                    onmouseover="startAnimation('videoContainer7')">
+                                    <div class="overlay" id="overlay">
+                                        <img src="https://pbblogassets.s3.amazonaws.com/uploads/2019/10/14155914/aspectRatioEvolution_lauterbrunnen-1-1.jpg"
+                                            alt="Screenshot" class="screenshot">
+                                    </div>
+                                    <video muted loop id="video">
+                                        <source
+                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <h4 class="card-text">TEST VIDEO</h4>
+                                <div data-tilt class="text-center mt-3" data-tilt>
+                                    <a class="inner-route" target="_blank" aria-label="Demo"
+                                        href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
+                                </div>
+                                <div data-tilt class="text-center mt-3 mb-3" data-tilt>
+                                    <a class="inner-route2" target="_blank" aria-label="Created By"
+                                        href="https://codepen.io/DawidKrajewski">Visit Creator</a>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
