@@ -88,32 +88,32 @@ body {
 .hi__cuboid .face--front {
   width: 500px;
   height: 70px;
-  transform: translateZ(calc(70px/2));
+  transform: translateZ(calc(70px / 2));
 }
 .hi__cuboid .face--back {
   width: 500px;
   height: 70px;
-  transform: translateZ(calc(70px/2 *-1)) rotateY(180deg) rotate(180deg);
+  transform: translateZ(calc(70px / 2 * -1)) rotateY(180deg) rotate(180deg);
 }
 .hi__cuboid .face--left {
   width: 70px;
   height: 70px;
-  transform: translateX(calc(70px/2 *-1)) rotateY(-90deg);
+  transform: translateX(calc(70px / 2 * -1)) rotateY(-90deg);
 }
 .hi__cuboid .face--right {
   width: 70px;
   height: 70px;
-  transform: translateX(calc(500px - 70px/2)) rotateY(90deg);
+  transform: translateX(calc(500px - 70px / 2)) rotateY(90deg);
 }
 .hi__cuboid .face--top {
   width: 500px;
   height: 70px;
-  transform: translateY(calc(70px/2 * -1)) rotateX(90deg);
+  transform: translateY(calc(70px / 2 * -1)) rotateX(90deg);
 }
 .hi__cuboid .face--bottom {
   width: 500px;
   height: 70px;
-  transform: translateY(calc(70px - 70px/2)) rotateX(-90deg);
+  transform: translateY(calc(70px - 70px / 2)) rotateX(-90deg);
 }
 
 .face {
