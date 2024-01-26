@@ -2529,13 +2529,13 @@ div {
   animation-delay: -1200ms;
 }
 .set:nth-child(1) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(141, 84, 19), rgb(171, 114, 49));
+  background: linear-gradient(0deg, rgb(0, 0, 174), rgb(21, 20, 204));
 }
 .set:nth-child(1) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(161, 104, 39), rgb(191, 134, 69));
+  background: linear-gradient(0deg, rgb(11, 10, 194), rgb(41, 40, 224));
 }
 .set:nth-child(1) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(181, 124, 59), rgb(211, 154, 89));
+  background: linear-gradient(90deg, rgb(31, 30, 214), rgb(61, 60, 244));
 }
 .set:nth-child(2) {
   animation-delay: -2400ms;
@@ -2545,13 +2545,13 @@ div {
   animation-delay: -2400ms;
 }
 .set:nth-child(2) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(149, 36, 106), rgb(179, 66, 136));
+  background: linear-gradient(0deg, rgb(117, 76, 50), rgb(147, 106, 80));
 }
 .set:nth-child(2) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(169, 56, 126), rgb(199, 86, 156));
+  background: linear-gradient(0deg, rgb(137, 96, 70), rgb(167, 126, 100));
 }
 .set:nth-child(2) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(189, 76, 146), rgb(219, 106, 176));
+  background: linear-gradient(90deg, rgb(157, 116, 90), rgb(187, 146, 120));
 }
 .set:nth-child(3) {
   animation-delay: -3600ms;
@@ -2561,13 +2561,13 @@ div {
   animation-delay: -3600ms;
 }
 .set:nth-child(3) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(17, 68, 112), rgb(47, 98, 142));
+  background: linear-gradient(0deg, rgb(120, 122, 20), rgb(150, 152, 50));
 }
 .set:nth-child(3) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(37, 88, 132), rgb(67, 118, 162));
+  background: linear-gradient(0deg, rgb(140, 142, 40), rgb(170, 172, 70));
 }
 .set:nth-child(3) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(57, 108, 152), rgb(87, 138, 182));
+  background: linear-gradient(90deg, rgb(160, 162, 60), rgb(190, 192, 90));
 }
 .set:nth-child(4) {
   animation-delay: -4800ms;
@@ -2577,13 +2577,13 @@ div {
   animation-delay: -4800ms;
 }
 .set:nth-child(4) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(46, 56, 79), rgb(76, 86, 109));
+  background: linear-gradient(0deg, rgb(62, 66, 42), rgb(92, 96, 72));
 }
 .set:nth-child(4) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(66, 76, 99), rgb(96, 106, 129));
+  background: linear-gradient(0deg, rgb(82, 86, 62), rgb(112, 116, 92));
 }
 .set:nth-child(4) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(86, 96, 119), rgb(116, 126, 149));
+  background: linear-gradient(90deg, rgb(102, 106, 82), rgb(132, 136, 112));
 }
 .set:nth-child(5) {
   animation-delay: -6000ms;
@@ -2593,13 +2593,13 @@ div {
   animation-delay: -6000ms;
 }
 .set:nth-child(5) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(64, 131, 57), rgb(94, 161, 87));
+  background: linear-gradient(0deg, rgb(74, 54, 158), rgb(104, 84, 188));
 }
 .set:nth-child(5) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(84, 151, 77), rgb(114, 181, 107));
+  background: linear-gradient(0deg, rgb(94, 74, 178), rgb(124, 104, 208));
 }
 .set:nth-child(5) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(104, 171, 97), rgb(134, 201, 127));
+  background: linear-gradient(90deg, rgb(114, 94, 198), rgb(144, 124, 228));
 }
 .set:nth-child(6) {
   animation-delay: -7200ms;
@@ -2609,13 +2609,13 @@ div {
   animation-delay: -7200ms;
 }
 .set:nth-child(6) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(128, 84, 60), rgb(158, 114, 90));
+  background: linear-gradient(0deg, rgb(30, 119, 70), rgb(60, 149, 100));
 }
 .set:nth-child(6) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(148, 104, 80), rgb(178, 134, 110));
+  background: linear-gradient(0deg, rgb(50, 139, 90), rgb(80, 169, 120));
 }
 .set:nth-child(6) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(168, 124, 100), rgb(198, 154, 130));
+  background: linear-gradient(90deg, rgb(70, 159, 110), rgb(100, 189, 140));
 }
 .set:nth-child(7) {
   animation-delay: -8400ms;
@@ -2625,13 +2625,13 @@ div {
   animation-delay: -8400ms;
 }
 .set:nth-child(7) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(72, 174, 126), rgb(102, 204, 156));
+  background: linear-gradient(0deg, rgb(97, 16, 7), rgb(127, 46, 37));
 }
 .set:nth-child(7) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(92, 194, 146), rgb(122, 224, 176));
+  background: linear-gradient(0deg, rgb(117, 36, 27), rgb(147, 66, 57));
 }
 .set:nth-child(7) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(112, 214, 166), rgb(142, 244, 196));
+  background: linear-gradient(90deg, rgb(137, 56, 47), rgb(167, 86, 77));
 }
 .set:nth-child(8) {
   animation-delay: -9600ms;
@@ -2641,13 +2641,13 @@ div {
   animation-delay: -9600ms;
 }
 .set:nth-child(8) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(28, 116, 13), rgb(58, 146, 43));
+  background: linear-gradient(0deg, rgb(119, 46, 1), rgb(149, 76, 31));
 }
 .set:nth-child(8) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(48, 136, 33), rgb(78, 166, 63));
+  background: linear-gradient(0deg, rgb(139, 66, 21), rgb(169, 96, 51));
 }
 .set:nth-child(8) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(68, 156, 53), rgb(98, 186, 83));
+  background: linear-gradient(90deg, rgb(159, 86, 41), rgb(189, 116, 71));
 }
 .set:nth-child(9) {
   animation-delay: -10800ms;
@@ -2657,13 +2657,13 @@ div {
   animation-delay: -10800ms;
 }
 .set:nth-child(9) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(162, 178, 29), rgb(192, 208, 59));
+  background: linear-gradient(0deg, rgb(119, 172, 151), rgb(149, 202, 181));
 }
 .set:nth-child(9) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(182, 198, 49), rgb(212, 228, 79));
+  background: linear-gradient(0deg, rgb(139, 192, 171), rgb(169, 222, 201));
 }
 .set:nth-child(9) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(202, 218, 69), rgb(232, 248, 99));
+  background: linear-gradient(90deg, rgb(159, 212, 191), rgb(189, 242, 221));
 }
 .set:nth-child(10) {
   animation-delay: -12000ms;
@@ -2673,13 +2673,13 @@ div {
   animation-delay: -12000ms;
 }
 .set:nth-child(10) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(24, 46, 118), rgb(54, 76, 148));
+  background: linear-gradient(0deg, rgb(154, 136, 55), rgb(184, 166, 85));
 }
 .set:nth-child(10) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(44, 66, 138), rgb(74, 96, 168));
+  background: linear-gradient(0deg, rgb(174, 156, 75), rgb(204, 186, 105));
 }
 .set:nth-child(10) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(64, 86, 158), rgb(94, 116, 188));
+  background: linear-gradient(90deg, rgb(194, 176, 95), rgb(224, 206, 125));
 }
 .set:nth-child(11) {
   animation-delay: -13200ms;
@@ -2689,13 +2689,13 @@ div {
   animation-delay: -13200ms;
 }
 .set:nth-child(11) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(70, 120, 88), rgb(100, 150, 118));
+  background: linear-gradient(0deg, rgb(87, 132, 141), rgb(117, 162, 171));
 }
 .set:nth-child(11) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(90, 140, 108), rgb(120, 170, 138));
+  background: linear-gradient(0deg, rgb(107, 152, 161), rgb(137, 182, 191));
 }
 .set:nth-child(11) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(110, 160, 128), rgb(140, 190, 158));
+  background: linear-gradient(90deg, rgb(127, 172, 181), rgb(157, 202, 211));
 }
 .set:nth-child(12) {
   animation-delay: -14400ms;
@@ -2705,13 +2705,13 @@ div {
   animation-delay: -14400ms;
 }
 .set:nth-child(12) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(128, 159, 22), rgb(158, 189, 52));
+  background: linear-gradient(0deg, rgb(180, 0, 172), rgb(210, 16, 202));
 }
 .set:nth-child(12) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(148, 179, 42), rgb(178, 209, 72));
+  background: linear-gradient(0deg, rgb(200, 6, 192), rgb(230, 36, 222));
 }
 .set:nth-child(12) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(168, 199, 62), rgb(198, 229, 92));
+  background: linear-gradient(90deg, rgb(220, 26, 212), rgb(250, 56, 242));
 }
 .set:nth-child(13) {
   animation-delay: -15600ms;
@@ -2721,13 +2721,13 @@ div {
   animation-delay: -15600ms;
 }
 .set:nth-child(13) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(132, 53, 90), rgb(162, 83, 120));
+  background: linear-gradient(0deg, rgb(18, 52, 125), rgb(48, 82, 155));
 }
 .set:nth-child(13) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(152, 73, 110), rgb(182, 103, 140));
+  background: linear-gradient(0deg, rgb(38, 72, 145), rgb(68, 102, 175));
 }
 .set:nth-child(13) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(172, 93, 130), rgb(202, 123, 160));
+  background: linear-gradient(90deg, rgb(58, 92, 165), rgb(88, 122, 195));
 }
 .set:nth-child(14) {
   animation-delay: -16800ms;
@@ -2737,13 +2737,13 @@ div {
   animation-delay: -16800ms;
 }
 .set:nth-child(14) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(106, 17, 63), rgb(136, 47, 93));
+  background: linear-gradient(0deg, rgb(12, 44, 5), rgb(42, 74, 35));
 }
 .set:nth-child(14) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(126, 37, 83), rgb(156, 67, 113));
+  background: linear-gradient(0deg, rgb(32, 64, 25), rgb(62, 94, 55));
 }
 .set:nth-child(14) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(146, 57, 103), rgb(176, 87, 133));
+  background: linear-gradient(90deg, rgb(52, 84, 45), rgb(82, 114, 75));
 }
 .set:nth-child(15) {
   animation-delay: -18000ms;
@@ -2753,13 +2753,13 @@ div {
   animation-delay: -18000ms;
 }
 .set:nth-child(15) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(171, 19, 67), rgb(201, 49, 97));
+  background: linear-gradient(0deg, rgb(152, 32, 101), rgb(182, 62, 131));
 }
 .set:nth-child(15) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(191, 39, 87), rgb(221, 69, 117));
+  background: linear-gradient(0deg, rgb(172, 52, 121), rgb(202, 82, 151));
 }
 .set:nth-child(15) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(211, 59, 107), rgb(241, 89, 137));
+  background: linear-gradient(90deg, rgb(192, 72, 141), rgb(222, 102, 171));
 }
 .set:nth-child(16) {
   animation-delay: -19200ms;
@@ -2769,13 +2769,13 @@ div {
   animation-delay: -19200ms;
 }
 .set:nth-child(16) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(38, 137, 0), rgb(68, 167, 16));
+  background: linear-gradient(0deg, rgb(49, 113, 13), rgb(79, 143, 43));
 }
 .set:nth-child(16) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(58, 157, 6), rgb(88, 187, 36));
+  background: linear-gradient(0deg, rgb(69, 133, 33), rgb(99, 163, 63));
 }
 .set:nth-child(16) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(78, 177, 26), rgb(108, 207, 56));
+  background: linear-gradient(90deg, rgb(89, 153, 53), rgb(119, 183, 83));
 }
 .set:nth-child(17) {
   animation-delay: -20400ms;
@@ -2785,13 +2785,13 @@ div {
   animation-delay: -20400ms;
 }
 .set:nth-child(17) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(89, 159, 43), rgb(119, 189, 73));
+  background: linear-gradient(0deg, rgb(0, 44, 89), rgb(22, 74, 119));
 }
 .set:nth-child(17) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(109, 179, 63), rgb(139, 209, 93));
+  background: linear-gradient(0deg, rgb(12, 64, 109), rgb(42, 94, 139));
 }
 .set:nth-child(17) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(129, 199, 83), rgb(159, 229, 113));
+  background: linear-gradient(90deg, rgb(32, 84, 129), rgb(62, 114, 159));
 }
 .set:nth-child(18) {
   animation-delay: -21600ms;
@@ -2801,13 +2801,13 @@ div {
   animation-delay: -21600ms;
 }
 .set:nth-child(18) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(131, 11, 117), rgb(161, 41, 147));
+  background: linear-gradient(0deg, rgb(125, 67, 147), rgb(155, 97, 177));
 }
 .set:nth-child(18) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(151, 31, 137), rgb(181, 61, 167));
+  background: linear-gradient(0deg, rgb(145, 87, 167), rgb(175, 117, 197));
 }
 .set:nth-child(18) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(171, 51, 157), rgb(201, 81, 187));
+  background: linear-gradient(90deg, rgb(165, 107, 187), rgb(195, 137, 217));
 }
 .set:nth-child(19) {
   animation-delay: -22800ms;
@@ -2817,13 +2817,13 @@ div {
   animation-delay: -22800ms;
 }
 .set:nth-child(19) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(163, 38, 76), rgb(193, 68, 106));
+  background: linear-gradient(0deg, rgb(58, 15, 95), rgb(88, 45, 125));
 }
 .set:nth-child(19) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(183, 58, 96), rgb(213, 88, 126));
+  background: linear-gradient(0deg, rgb(78, 35, 115), rgb(108, 65, 145));
 }
 .set:nth-child(19) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(203, 78, 116), rgb(233, 108, 146));
+  background: linear-gradient(90deg, rgb(98, 55, 135), rgb(128, 85, 165));
 }
 .set:nth-child(20) {
   animation-delay: -24000ms;
@@ -2833,13 +2833,13 @@ div {
   animation-delay: -24000ms;
 }
 .set:nth-child(20) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(20, 56, 102), rgb(50, 86, 132));
+  background: linear-gradient(0deg, rgb(84, 130, 21), rgb(114, 160, 51));
 }
 .set:nth-child(20) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(40, 76, 122), rgb(70, 106, 152));
+  background: linear-gradient(0deg, rgb(104, 150, 41), rgb(134, 180, 71));
 }
 .set:nth-child(20) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(60, 96, 142), rgb(90, 126, 172));
+  background: linear-gradient(90deg, rgb(124, 170, 61), rgb(154, 200, 91));
 }
 .set:nth-child(21) {
   animation-delay: -25200ms;
@@ -2849,13 +2849,13 @@ div {
   animation-delay: -25200ms;
 }
 .set:nth-child(21) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(52, 114, 101), rgb(82, 144, 131));
+  background: linear-gradient(0deg, rgb(36, 16, 21), rgb(66, 46, 51));
 }
 .set:nth-child(21) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(72, 134, 121), rgb(102, 164, 151));
+  background: linear-gradient(0deg, rgb(56, 36, 41), rgb(86, 66, 71));
 }
 .set:nth-child(21) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(92, 154, 141), rgb(122, 184, 171));
+  background: linear-gradient(90deg, rgb(76, 56, 61), rgb(106, 86, 91));
 }
 .set:nth-child(22) {
   animation-delay: -26400ms;
@@ -2865,13 +2865,13 @@ div {
   animation-delay: -26400ms;
 }
 .set:nth-child(22) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(123, 117, 78), rgb(153, 147, 108));
+  background: linear-gradient(0deg, rgb(82, 47, 67), rgb(112, 77, 97));
 }
 .set:nth-child(22) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(143, 137, 98), rgb(173, 167, 128));
+  background: linear-gradient(0deg, rgb(102, 67, 87), rgb(132, 97, 117));
 }
 .set:nth-child(22) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(163, 157, 118), rgb(193, 187, 148));
+  background: linear-gradient(90deg, rgb(122, 87, 107), rgb(152, 117, 137));
 }
 .set:nth-child(23) {
   animation-delay: -27600ms;
@@ -2881,13 +2881,13 @@ div {
   animation-delay: -27600ms;
 }
 .set:nth-child(23) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(42, 31, 36), rgb(72, 61, 66));
+  background: linear-gradient(0deg, rgb(95, 142, 77), rgb(125, 172, 107));
 }
 .set:nth-child(23) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(62, 51, 56), rgb(92, 81, 86));
+  background: linear-gradient(0deg, rgb(115, 162, 97), rgb(145, 192, 127));
 }
 .set:nth-child(23) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(82, 71, 76), rgb(112, 101, 106));
+  background: linear-gradient(90deg, rgb(135, 182, 117), rgb(165, 212, 147));
 }
 .set:nth-child(24) {
   animation-delay: -28800ms;
@@ -2897,13 +2897,13 @@ div {
   animation-delay: -28800ms;
 }
 .set:nth-child(24) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(0, 56, 7), rgb(26, 86, 37));
+  background: linear-gradient(0deg, rgb(99, 83, 168), rgb(129, 113, 198));
 }
 .set:nth-child(24) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(16, 76, 27), rgb(46, 106, 57));
+  background: linear-gradient(0deg, rgb(119, 103, 188), rgb(149, 133, 218));
 }
 .set:nth-child(24) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(36, 96, 47), rgb(66, 126, 77));
+  background: linear-gradient(90deg, rgb(139, 123, 208), rgb(169, 153, 238));
 }
 .set:nth-child(25) {
   animation-delay: -30000ms;
@@ -2913,13 +2913,13 @@ div {
   animation-delay: -30000ms;
 }
 .set:nth-child(25) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(145, 159, 141), rgb(175, 189, 171));
+  background: linear-gradient(0deg, rgb(7, 121, 22), rgb(37, 151, 52));
 }
 .set:nth-child(25) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(165, 179, 161), rgb(195, 209, 191));
+  background: linear-gradient(0deg, rgb(27, 141, 42), rgb(57, 171, 72));
 }
 .set:nth-child(25) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(185, 199, 181), rgb(215, 229, 211));
+  background: linear-gradient(90deg, rgb(47, 161, 62), rgb(77, 191, 92));
 }
 .set:nth-child(26) {
   animation-delay: -31200ms;
@@ -2929,13 +2929,13 @@ div {
   animation-delay: -31200ms;
 }
 .set:nth-child(26) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(21, 59, 97), rgb(51, 89, 127));
+  background: linear-gradient(0deg, rgb(119, 48, 175), rgb(149, 78, 205));
 }
 .set:nth-child(26) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(41, 79, 117), rgb(71, 109, 147));
+  background: linear-gradient(0deg, rgb(139, 68, 195), rgb(169, 98, 225));
 }
 .set:nth-child(26) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(61, 99, 137), rgb(91, 129, 167));
+  background: linear-gradient(90deg, rgb(159, 88, 215), rgb(189, 118, 245));
 }
 .set:nth-child(27) {
   animation-delay: -32400ms;
@@ -2945,13 +2945,13 @@ div {
   animation-delay: -32400ms;
 }
 .set:nth-child(27) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(54, 95, 59), rgb(84, 125, 89));
+  background: linear-gradient(0deg, rgb(0, 75, 180), rgb(29, 105, 210));
 }
 .set:nth-child(27) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(74, 115, 79), rgb(104, 145, 109));
+  background: linear-gradient(0deg, rgb(19, 95, 200), rgb(49, 125, 230));
 }
 .set:nth-child(27) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(94, 135, 99), rgb(124, 165, 129));
+  background: linear-gradient(90deg, rgb(39, 115, 220), rgb(69, 145, 250));
 }
 .set:nth-child(28) {
   animation-delay: -33600ms;
@@ -2961,13 +2961,13 @@ div {
   animation-delay: -33600ms;
 }
 .set:nth-child(28) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(144, 44, 0), rgb(174, 74, 29));
+  background: linear-gradient(0deg, rgb(70, 53, 32), rgb(100, 83, 62));
 }
 .set:nth-child(28) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(164, 64, 19), rgb(194, 94, 49));
+  background: linear-gradient(0deg, rgb(90, 73, 52), rgb(120, 103, 82));
 }
 .set:nth-child(28) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(184, 84, 39), rgb(214, 114, 69));
+  background: linear-gradient(90deg, rgb(110, 93, 72), rgb(140, 123, 102));
 }
 .set:nth-child(29) {
   animation-delay: -34800ms;
@@ -2977,13 +2977,13 @@ div {
   animation-delay: -34800ms;
 }
 .set:nth-child(29) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(97, 123, 140), rgb(127, 153, 170));
+  background: linear-gradient(0deg, rgb(0, 20, 54), rgb(12, 50, 84));
 }
 .set:nth-child(29) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(117, 143, 160), rgb(147, 173, 190));
+  background: linear-gradient(0deg, rgb(2, 40, 74), rgb(32, 70, 104));
 }
 .set:nth-child(29) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(137, 163, 180), rgb(167, 193, 210));
+  background: linear-gradient(90deg, rgb(22, 60, 94), rgb(52, 90, 124));
 }
 .set:nth-child(30) {
   animation-delay: -36000ms;
@@ -2993,13 +2993,13 @@ div {
   animation-delay: -36000ms;
 }
 .set:nth-child(30) .plug .wall:nth-child(1) {
-  background: linear-gradient(0deg, rgb(106, 95, 162), rgb(136, 125, 192));
+  background: linear-gradient(0deg, rgb(67, 172, 160), rgb(97, 202, 190));
 }
 .set:nth-child(30) .plug .wall:nth-child(2) {
-  background: linear-gradient(0deg, rgb(126, 115, 182), rgb(156, 145, 212));
+  background: linear-gradient(0deg, rgb(87, 192, 180), rgb(117, 222, 210));
 }
 .set:nth-child(30) .plug .wall:nth-child(3) {
-  background: linear-gradient(90deg, rgb(146, 135, 202), rgb(176, 165, 232));
+  background: linear-gradient(90deg, rgb(107, 212, 200), rgb(137, 242, 230));
 }
 
 @keyframes cover {
