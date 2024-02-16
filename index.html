@@ -48,8 +48,12 @@
 </head>
 
 <body>
-    <h3 class="text-center">Website In Progress</h3>
-    <p class="text-center">Currently Working On Video Animation And Code Download And Code Compression for Download using Cron Job In Java</p>
+    <h2 class="text-center"><u>Website In Progress</u></h2>
+    <p class="text-center"><b>Currently Working On</b> 
+        <br>--Video Animation 
+        <br>--Code Download 
+        <br>--Code Compression for Download using Cron Job In Java
+        <br>--Dynamic Rendering Of Html.</p>
     <!-- WILL TRY BLOB EFFECT -->
     <!-- <div id="blob"></div> -->
 
@@ -58,7 +62,7 @@
         <div class="container-fluid">
 
             <div data-wow-duration="1.5s" data-wow-delay="0.5s" class="wow bounceInUp">
-                <div class="row">
+                <div class="row" id="test">
 
 
                     <!-- Trying videos -->
@@ -155,7 +159,61 @@
                             videoContainers.forEach(container => {
                                 observer.observe(container);
                             });
+
+                            let tempArray = [
+                            {
+                                "name": "umair",
+                            },
+                            {
+                                "name": "sajid",
+                            },
+                            {
+                                "name": "wahab",
+                            }
+                        ]
+                            tempArray.forEach((element, index) => {
+                            createCardTest(element,index);
                         });
+
+                        
+                        });
+
+                       
+
+                        
+
+                        function createCardTest(data, i) {
+                            const cardContainer = document.getElementById('test');
+                            const cardDiv = document.createElement('div');
+                            cardDiv.classList.add('col-md-3', 'col-sm-12', 'col-lg-3');
+                            cardDiv.innerHTML = `
+      <div class="card-wrapper text-center">
+        <span class="card-route" target="_blank" href="">
+          <div id="videoContainer" class="video-container" onclick="startAnimation('videoContainer')">
+            <div class="overlay" id="overlay">
+              <img src="" alt="Screenshot" class="screenshot">
+            </div>
+            <video muted loop id="video">
+              <source src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <h4 class="card-text">${data.name + i}</h4>
+          <div data-tilt class="text-center mt-2" data-tilt>
+            <a class="inner-route" target="_blank" aria-label="Demo" href="">Demo</a>
+          </div>
+          <div data-tilt class="text-center mt-2" data-tilt>
+            <a class="inner-route" target="_blank" aria-label="Download" href="" download="">Download Zip</a>
+          </div>
+          <div data-tilt class="text-center mt-2 mb-2" data-tilt>
+            <a class="inner-route2" target="_blank" aria-label="Created By" href="">Visit Creator</a>
+          </div>
+        </span>
+      </div>
+    `;
+
+                            cardContainer.appendChild(cardDiv);
+                        }
                     </script>
 
                     <div class="col-md-3 col-sm-12 col-lg-3">
@@ -163,7 +221,7 @@
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
 
                                 <div id="videoContainer1" class="video-container"
-                                    onmouseover="startAnimation('videoContainer1')">
+                                    onclick="startAnimation('videoContainer1')">
                                     <div class="overlay" id="overlay">
                                         <img src="https://miro.medium.com/v2/resize:fit:1400/1*xjl3U-PlELfH8i2IlfwLJA.jpeg"
                                             alt="Screenshot" class="screenshot">
@@ -200,7 +258,7 @@
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
 
                                 <div id="videoContainer1" class="video-container"
-                                    onmouseover="startAnimation('videoContainer1')">
+                                    onclick="startAnimation('videoContainer1')">
                                     <div class="overlay" id="overlay">
                                         <img src="https://miro.medium.com/v2/resize:fit:1400/1*xjl3U-PlELfH8i2IlfwLJA.jpeg"
                                             alt="Screenshot" class="screenshot">
@@ -336,7 +394,8 @@
                                 </div>
                                 <div data-tilt class="text-center mt-2" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/FakeHacking.zip" download="FakeHackingTest.zip">Download Zip</a>
+                                        href="zipper-files/FakeHacking.zip" download="FakeHackingTest.zip">Download
+                                        Zip</a>
                                 </div>
                                 <div data-tilt class="text-center mt-2 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -1626,6 +1685,29 @@
     <script src="assets/js/animation.js"></script>
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/js/tilt.jquery.js"></script>
+
+
+<script>
+    //test
+    const apiUrl = 'http://172.191.1.223:3000/test';
+fetch(apiUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
+
+
+
+</script>
+
 
 
 </body>
