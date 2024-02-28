@@ -32,9 +32,12 @@
     <meta name="application-name" content="Code Pen" />
 
     <!-- The <meta name="apple-mobile-web-app-capable"> meta tag is used in HTML to control the behavior of a web application when it is added to the home screen on an Apple iOS device. Specifically, it's used to indicate whether the web application should run in standalone mode, i.e., without the browser chrome. -->
-    <meta name="apple-mobile-web-app-capable" content="no" />
+    <!-- NOT TESTED --UMAIR.ALI -->
+    <!-- <meta name="apple-mobile-web-app-capable" content="no" /> -->
+
+
     <!-- The <meta name="msapplication-TileColor"> meta tag is used to define the background color of the tile on the Windows Start screen when a user pins a website to the Start menu in Internet Explorer and Microsoft Edge. This tag is specific to Microsoft browsers. -->
-    <meta name="msapplication-TileColor" content="#3498db" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
     <!-- The <meta name="msapplication-TileImage"> meta tag is used to specify the path to the image file that will be used as the tile icon on the Windows Start screen when a user pins a website to the Start menu in Internet Explorer and Microsoft Edge. This tag is specific to Microsoft browsers. -->
     <meta name="msapplication-TileImage" content="https://umair-ali-bhutto.github.io/assets/CodePenIcon/logo.png" />
 
@@ -1690,19 +1693,19 @@
 <script>
     //test
     const apiUrl = 'http://172.191.1.223:3000/test';
-fetch(apiUrl)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('There was a problem with the fetch operation:', error);
-  });
+// fetch(apiUrl)
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error('Network response was not ok');
+//     }
+//     return response.json();
+//   })
+//   .then(data => {
+//     console.log(data);
+//   })
+//   .catch(error => {
+//     console.error('There was a problem with the fetch operation:', error);
+//   });
 
 
 
