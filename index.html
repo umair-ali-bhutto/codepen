@@ -52,12 +52,11 @@
 
 <body>
     <h2 class="text-center"><u>Website In Progress</u></h2>
-    <p class="text-center"><b>Currently Working On</b> 
-        <br>--Video Animation 
-        <br>--Code Download 
-        <br>--Dynamic Rendering Of Html.</p>
-    <!-- WILL TRY BLOB EFFECT -->
-    <!-- <div id="blob"></div> -->
+    <p class="text-center"><b>Currently Working On</b>
+        <br>--Video Animation
+        <br>--Code Download
+        <br>--Dynamic Rendering Of Html.
+    </p>
 
     <!-- Routes To CodePens -->
     <section class="m-4">
@@ -111,6 +110,17 @@
                             border-radius: 10px;
                             transition: opacity 0.5s ease;
                         }
+
+                        .text-overlay {
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            text-align: center;
+                            color: white;
+                            font-size: 15px;
+                            box-sizing: border-box;
+                            background-color: rgba(0, 0, 0, 0.5);
+                        }
                     </style>
 
                     <script>
@@ -163,26 +173,26 @@
                             });
 
                             let tempArray = [
-                            {
-                                "name": "umair",
-                            },
-                            {
-                                "name": "sajid",
-                            },
-                            {
-                                "name": "wahab",
-                            }
-                        ]
+                                {
+                                    "name": "umair",
+                                },
+                                {
+                                    "name": "sajid",
+                                },
+                                {
+                                    "name": "wahab",
+                                }
+                            ]
                             tempArray.forEach((element, index) => {
-                            createCardTest(element,index);
+                                createCardTest(element, index);
+                            });
+
+
                         });
 
-                        
-                        });
 
-                       
 
-                        
+
 
                         function createCardTest(data, i) {
                             const cardContainer = document.getElementById('test');
@@ -227,6 +237,8 @@
                                     <div class="overlay" id="overlay">
                                         <img src="https://miro.medium.com/v2/resize:fit:1400/1*xjl3U-PlELfH8i2IlfwLJA.jpeg"
                                             alt="Screenshot" class="screenshot">
+                                        <div class="text-overlay">--- Click To Play ---</div>
+
                                     </div>
                                     <video muted loop id="video">
                                         <source
@@ -299,7 +311,7 @@
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
 
                                 <div id="videoContainer1" class="video-container"
-                                    onmouseover="startAnimation('videoContainer1')">
+                                    onlclick="startAnimation('videoContainer1')">
                                     <div class="overlay" id="overlay">
                                         <img src="https://miro.medium.com/v2/resize:fit:1400/1*xjl3U-PlELfH8i2IlfwLJA.jpeg"
                                             alt="Screenshot" class="screenshot">
@@ -338,7 +350,7 @@
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
 
                                 <div id="videoContainer1" class="video-container"
-                                    onmouseover="startAnimation('videoContainer1')">
+                                    onlclick="startAnimation('videoContainer1')">
                                     <div class="overlay" id="overlay">
                                         <img src="https://miro.medium.com/v2/resize:fit:1400/1*xjl3U-PlELfH8i2IlfwLJA.jpeg"
                                             alt="Screenshot" class="screenshot">
@@ -376,7 +388,7 @@
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
 
                                 <div id="videoContainer1" class="video-container"
-                                    onmouseover="startAnimation('videoContainer1')">
+                                    onlclick="startAnimation('videoContainer1')">
                                     <div class="overlay" id="overlay">
                                         <img src="https://miro.medium.com/v2/resize:fit:1400/1*xjl3U-PlELfH8i2IlfwLJA.jpeg"
                                             alt="Screenshot" class="screenshot">
@@ -412,7 +424,7 @@
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
 
                                 <div id="videoContainer2" class="video-container"
-                                    onmouseover="startAnimation('videoContainer2')">
+                                    onlclick="startAnimation('videoContainer2')">
                                     <div class="overlay" id="overlay">
                                         <img src="https://pbblogassets.s3.amazonaws.com/uploads/2019/10/14155914/aspectRatioEvolution_lauterbrunnen-1-1.jpg"
                                             alt="Screenshot" class="screenshot">
@@ -444,7 +456,7 @@
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
 
                                 <div id="videoContainer3" class="video-container"
-                                    onmouseover="startAnimation('videoContainer3')">
+                                    onlclick="startAnimation('videoContainer3')">
                                     <div class="overlay" id="overlay">
                                         <img src="https://pbblogassets.s3.amazonaws.com/uploads/2019/10/14155914/aspectRatioEvolution_lauterbrunnen-1-1.jpg"
                                             alt="Screenshot" class="screenshot">
@@ -955,7 +967,7 @@
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
 
                                 <div id="videoContainer4" class="video-container"
-                                    onmouseover="startAnimation('videoContainer4')">
+                                    onlclick="startAnimation('videoContainer4')">
                                     <div class="overlay" id="overlay">
                                         <img src="https://pbblogassets.s3.amazonaws.com/uploads/2019/10/14155914/aspectRatioEvolution_lauterbrunnen-1-1.jpg"
                                             alt="Screenshot" class="screenshot">
@@ -985,7 +997,7 @@
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
 
                                 <div id="videoContainer5" class="video-container"
-                                    onmouseover="startAnimation('videoContainer5')">
+                                    onlclick="startAnimation('videoContainer5')">
                                     <div class="overlay" id="overlay">
                                         <img src="https://pbblogassets.s3.amazonaws.com/uploads/2019/10/14155914/aspectRatioEvolution_lauterbrunnen-1-1.jpg"
                                             alt="Screenshot" class="screenshot">
@@ -1536,7 +1548,7 @@
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
 
                                 <div id="videoContainer6" class="video-container"
-                                    onmouseover="startAnimation('videoContainer6')">
+                                    onlclick="startAnimation('videoContainer6')">
                                     <div class="overlay" id="overlay">
                                         <img src="https://pbblogassets.s3.amazonaws.com/uploads/2019/10/14155914/aspectRatioEvolution_lauterbrunnen-1-1.jpg"
                                             alt="Screenshot" class="screenshot">
@@ -1566,7 +1578,7 @@
                             <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
 
                                 <div id="videoContainer7" class="video-container"
-                                    onmouseover="startAnimation('videoContainer7')">
+                                    onlclick="startAnimation('videoContainer7')">
                                     <div class="overlay" id="overlay">
                                         <img src="https://pbblogassets.s3.amazonaws.com/uploads/2019/10/14155914/aspectRatioEvolution_lauterbrunnen-1-1.jpg"
                                             alt="Screenshot" class="screenshot">
@@ -1689,26 +1701,26 @@
     <script src="assets/js/tilt.jquery.js"></script>
 
 
-<script>
-    //test
-    const apiUrl = 'http://172.191.1.223:3000/test';
-// fetch(apiUrl)
-//   .then(response => {
-//     if (!response.ok) {
-//       throw new Error('Network response was not ok');
-//     }
-//     return response.json();
-//   })
-//   .then(data => {
-//     console.log(data);
-//   })
-//   .catch(error => {
-//     console.error('There was a problem with the fetch operation:', error);
-//   });
+    <script>
+        //test
+        const apiUrl = 'http://172.191.1.223:3000/test';
+        // fetch(apiUrl)
+        //   .then(response => {
+        //     if (!response.ok) {
+        //       throw new Error('Network response was not ok');
+        //     }
+        //     return response.json();
+        //   })
+        //   .then(data => {
+        //     console.log(data);
+        //   })
+        //   .catch(error => {
+        //     console.error('There was a problem with the fetch operation:', error);
+        //   });
 
 
 
-</script>
+    </script>
 
 
 
