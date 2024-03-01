@@ -186,14 +186,15 @@
                                 .then(data => {
                                     console.log(data);
                                     tempArray = data;
+                                    console.log(tempArray);
+                                    tempArray.forEach((element, index) => {
+                                        createCardTest(element, index);
+                                    });
                                 })
                                 .catch(error => {
                                     console.error('There was a problem with the fetch operation:', error);
                                 });
 
-                            tempArray.forEach((element, index) => {
-                                createCardTest(element, index);
-                            });
 
 
                         });
