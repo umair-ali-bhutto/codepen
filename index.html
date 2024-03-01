@@ -1718,6 +1718,21 @@
         //     console.error('There was a problem with the fetch operation:', error);
         //   });
 
+        //test
+        const apiUrltest = 'http://172.191.1.223:3000/test';
+        fetch(apiUrl)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log(data);
+          })
+          .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+          });
 
 
     </script>
