@@ -79,6 +79,22 @@
                             }
                         }
 
+                        @keyframes reAppear {
+                            0% {
+                                transform: translateY(100%);
+                                opacity: 0;
+                            }
+
+                            50% {
+                                opacity: 0.5;
+                            }
+
+                            100% {
+                                transform: translateY(0);
+                                opacity: 1;
+                            }
+                        }
+
                         .video-container {
                             position: relative;
                             margin-bottom: 10px;
@@ -135,14 +151,45 @@
                                     overlay.style.animation = 'falling 1.5s forwards';
                                     video.play();
 
-                                    overlay.addEventListener('animationend', function () {
+
+                                    setTimeout(function () {
                                         overlay.style.display = 'none';
                                         video.controls = true;
-                                    });
+                                    }, 1500);
+
+                                    // overlay.addEventListener('animationend', function () {
+                                    //     overlay.style.display = 'none';
+                                    //     video.controls = true;
+                                    // });
                                 }
                             }
 
                         }
+
+
+
+                        function restartAnimation(containerId) {
+                            const container = document.getElementById(containerId);
+
+                            if (container) {
+                                const overlay = container.querySelector('.overlay');
+                                const video = container.querySelector('video');
+
+                                if (overlay && video) {
+
+                                    overlay.style.display = 'block';
+                                    overlay.style.animation = 'reAppear 1.5s';
+                                    video.controls = false;
+
+                                    setTimeout(function () {
+                                        video.currentTime = 0;
+                                        video.pause();
+                                    }, 1500);
+
+                                }
+                            }
+                        }
+
 
 
 
@@ -164,13 +211,6 @@
                         }
 
                         document.addEventListener('DOMContentLoaded', function () {
-                            const videoContainers = document.querySelectorAll('.video-container');
-
-                            const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
-
-                            videoContainers.forEach(container => {
-                                observer.observe(container);
-                            });
 
                             let tempArray = [];
                             //WE CAN DYNAMICALLY RENDER THIS JSON BUT HAVE TO WORK ON API 
@@ -186,10 +226,18 @@
                                 .then(data => {
                                     console.log(data);
                                     tempArray = data;
-                                    console.log(tempArray);
                                     tempArray.forEach((element, index) => {
                                         createCardTest(element, index);
                                     });
+
+                                    const videoContainers = document.querySelectorAll('.video-container');
+
+                                    const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+
+                                    videoContainers.forEach(container => {
+                                        observer.observe(container);
+                                    });
+
                                 })
                                 .catch(error => {
                                     console.error('There was a problem with the fetch operation:', error);
@@ -208,29 +256,41 @@
                             const cardDiv = document.createElement('div');
                             cardDiv.classList.add('col-md-3', 'col-sm-12', 'col-lg-3');
                             cardDiv.innerHTML = `
-      <div class="card-wrapper text-center">
-        <span class="card-route" target="_blank" href="">
-          <div id="videoContainer" class="video-container" onclick="startAnimation('videoContainer')">
-            <div class="overlay" id="overlay">
-              <img src="" alt="Screenshot" class="screenshot">
-            </div>
-            <video muted loop id="video">
-              <source src="" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <h4 class="card-text">${data.name + (i + 1)}<br> ${(i)}</h4>
-          <div data-tilt class="text-center mt-2" data-tilt>
-            <a class="inner-route" target="_blank" aria-label="Demo" href="">Demo</a>
-          </div>
-          <div data-tilt class="text-center mt-2" data-tilt>
-            <a class="inner-route" target="_blank" aria-label="Download" href="" download="">Download Zip</a>
-          </div>
-          <div data-tilt class="text-center mt-2 mb-2" data-tilt>
-            <a class="inner-route2" target="_blank" aria-label="Created By" href="">Visit Creator</a>
-          </div>
-        </span>
-      </div>
+                        <div class="card-wrapper text-center">
+                            <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
+
+                                <div id="videoContainer${i + 20}" class="video-container"
+                                    onclick="startAnimation('videoContainer${i + 20}')">
+                                    <div class="overlay" id="overlay">
+                                        <img src="https://umair-ali-bhutto.github.io/assets/ProjectPen/cs.jpg"
+                                            alt="Screenshot" class="screenshot">
+                                        <div class="text-overlay">-- -- -- Click To Play -- -- --</div>
+
+                                    </div>
+                                    <video muted loop id="video">
+                                        <source
+                                            src="https://umair-ali-bhutto.github.io/assets/ProjectPen/bunny.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <h4 class="card-text">${data.name + (i + 1)}</h4>
+                                <div data-tilt class="text-center mt-2" data-tilt>
+                                    <a class="inner-route" target="_blank" aria-label="Demo"
+                                        href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
+                                </div>
+                                <div data-tilt class="text-center mt-2" data-tilt>
+                                    <a class="inner-route" target="_blank" aria-label="Download"
+                                        href="zipper-files/3dCube.zip" download="3dCube.zip">Download Zip</a>
+                                </div>
+                                <div data-tilt class="text-center mt-2 mb-2" data-tilt>
+                                    <a class="inner-route2" target="_blank" aria-label="Created By"
+                                        href="https://codepen.io/DawidKrajewski">Visit Creator</a>
+                                </div>
+                            </span>
+                        </div>
+                   
     `;
 
                             cardContainer.appendChild(cardDiv);
@@ -244,14 +304,13 @@
                                 <div id="videoContainer8" class="video-container"
                                     onclick="startAnimation('videoContainer8')">
                                     <div class="overlay" id="overlay">
-                                        <img src="https://miro.medium.com/v2/resize:fit:1400/1*xjl3U-PlELfH8i2IlfwLJA.jpeg"
+                                        <img src="https://umair-ali-bhutto.github.io/assets/ProjectPen/cs.jpg"
                                             alt="Screenshot" class="screenshot">
-                                        <div class="text-overlay">------ Click To Play ------</div>
+                                        <div class="text-overlay">-- -- -- Click To Play -- -- --</div>
 
                                     </div>
                                     <video muted loop id="video">
-                                        <source
-                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                        <source src="https://umair-ali-bhutto.github.io/assets/ProjectPen/bunny.mp4"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
@@ -259,6 +318,9 @@
 
                                 <h4 class="card-text">TEST VIDEO</h4>
                                 <div data-tilt class="text-center mt-2" data-tilt>
+                                    <div onclick="restartAnimation('videoContainer8')">
+                                        test
+                                    </div>
                                     <a class="inner-route" target="_blank" aria-label="Demo"
                                         href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
                                 </div>
@@ -283,12 +345,12 @@
                                 <div id="videoContainer7" class="video-container"
                                     onclick="startAnimation('videoContainer7')">
                                     <div class="overlay" id="overlay">
-                                        <img src="https://miro.medium.com/v2/resize:fit:1400/1*xjl3U-PlELfH8i2IlfwLJA.jpeg"
+                                        <img src="https://umair-ali-bhutto.github.io/assets/ProjectPen/cs.jpg"
                                             alt="Screenshot" class="screenshot">
+                                        <div class="text-overlay">-- -- -- Click To Play -- -- --</div>
                                     </div>
                                     <video muted loop id="video">
-                                        <source
-                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                        <source src="https://umair-ali-bhutto.github.io/assets/ProjectPen/bunny.mp4"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
@@ -523,7 +585,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/CssBallSwitch.zip" download="CssBallSwitch.zip">Download Zip</a>
+                                        href="zipper-files/CssBallSwitch.zip" download="CssBallSwitch.zip">Download
+                                        Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -673,7 +736,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/PureCssSlider.zip" download="PureCssSlider.zip">Download Zip</a>
+                                        href="zipper-files/PureCssSlider.zip" download="PureCssSlider.zip">Download
+                                        Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -694,7 +758,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/FontPerspective.zip" download="FontPerspective.zip">Download Zip</a>
+                                        href="zipper-files/FontPerspective.zip" download="FontPerspective.zip">Download
+                                        Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -716,7 +781,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/FloatingWords.zip" download="FloatingWords.zip">Download Zip</a>
+                                        href="zipper-files/FloatingWords.zip" download="FloatingWords.zip">Download
+                                        Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -760,7 +826,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/ColorChangingText.zip" download="ColorChangingText.zip">Download Zip</a>
+                                        href="zipper-files/ColorChangingText.zip"
+                                        download="ColorChangingText.zip">Download Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -803,7 +870,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/PureCssToggleButtons.zip" download="PureCssToggleButtons.zip">Download Zip</a>
+                                        href="zipper-files/PureCssToggleButtons.zip"
+                                        download="PureCssToggleButtons.zip">Download Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -825,7 +893,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/PureCssToggles.zip" download="PureCssToggles.zip">Download Zip</a>
+                                        href="zipper-files/PureCssToggles.zip" download="PureCssToggles.zip">Download
+                                        Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -906,7 +975,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/3dTiltWithIcons.zip" download="3dTiltWithIcons.zip">Download Zip</a>
+                                        href="zipper-files/3dTiltWithIcons.zip" download="3dTiltWithIcons.zip">Download
+                                        Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -928,7 +998,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/LandingPageWithModals.zip" download="LandingPageWithModals.zip">Download Zip</a>
+                                        href="zipper-files/LandingPageWithModals.zip"
+                                        download="LandingPageWithModals.zip">Download Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -951,7 +1022,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/TransitionOnlyJS.zip" download="TransitionOnlyJS.zip">Download Zip</a>
+                                        href="zipper-files/TransitionOnlyJS.zip"
+                                        download="TransitionOnlyJS.zip">Download Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -973,7 +1045,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/LayeredClock.zip" download="LayeredClock.zip">Download Zip</a>
+                                        href="zipper-files/LayeredClock.zip" download="LayeredClock.zip">Download
+                                        Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -994,7 +1067,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/GradientText.zip" download="GradientText.zip">Download Zip</a>
+                                        href="zipper-files/GradientText.zip" download="GradientText.zip">Download
+                                        Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -1015,7 +1089,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/InfinitePlugin.zip" download="InfinitePlugin.zip">Download Zip</a>
+                                        href="zipper-files/InfinitePlugin.zip" download="InfinitePlugin.zip">Download
+                                        Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -1080,7 +1155,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/MatrixCodeRain.zip" download="MatrixCodeRain.zip">Download Zip</a>
+                                        href="zipper-files/MatrixCodeRain.zip" download="MatrixCodeRain.zip">Download
+                                        Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -1103,7 +1179,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/DroppyWoppyInput.zip" download="DroppyWoppyInput.zip">Download Zip</a>
+                                        href="zipper-files/DroppyWoppyInput.zip"
+                                        download="DroppyWoppyInput.zip">Download Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -1146,7 +1223,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/GsapLandingPage.zip" download="GsapLandingPage.zip">Download Zip</a>
+                                        href="zipper-files/GsapLandingPage.zip" download="GsapLandingPage.zip">Download
+                                        Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -1189,7 +1267,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/NixieTubeClock.zip" download="NixieTubeClock.zip">Download Zip</a>
+                                        href="zipper-files/NixieTubeClock.zip" download="NixieTubeClock.zip">Download
+                                        Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -1211,7 +1290,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/BackgroundSlider.zip" download="BackgroundSlider.zip">Download Zip</a>
+                                        href="zipper-files/BackgroundSlider.zip"
+                                        download="BackgroundSlider.zip">Download Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
@@ -1232,7 +1312,8 @@
                                 </div>
                                 <div class="text-center mt-3" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/LandingPage_TinySlider.zip" download="LandingPage_TinySlider.zip">Download Zip</a>
+                                        href="zipper-files/LandingPage_TinySlider.zip"
+                                        download="LandingPage_TinySlider.zip">Download Zip</a>
                                 </div>
                                 <div class="text-center mt-3 mb-2" data-tilt>
                                     <a class="inner-route2" target="_blank" aria-label="Created By"
