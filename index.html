@@ -140,6 +140,8 @@
                     </style>
 
                     <script>
+                        var myContainers = [];
+
                         function startAnimation(containerId) {
                             const container = document.getElementById(containerId);
 
@@ -148,6 +150,7 @@
                                 const video = container.querySelector('video');
 
                                 if (overlay && video) {
+                                    myContainers.push(containerId.toString());
                                     overlay.style.animation = 'falling 1.5s forwards';
                                     video.play();
 
@@ -177,14 +180,21 @@
 
                                 if (overlay && video) {
 
-                                    overlay.style.display = 'block';
-                                    overlay.style.animation = 'reAppear 1.5s';
-                                    video.controls = false;
+                                    if (myContainers.includes(containerId.toString())) {
+                                        myContainers.splice(myContainers.indexOf(containerId.toString()), 1);
 
-                                    setTimeout(function () {
-                                        video.currentTime = 0;
-                                        video.pause();
-                                    }, 1500);
+                                        overlay.style.display = 'block';
+                                        overlay.style.animation = 'reAppear 1.5s';
+                                        video.controls = false;
+
+                                        setTimeout(function () {
+
+                                            video.currentTime = 0;
+                                            video.pause();
+                                        }, 1500);
+
+                                    }
+
 
                                 }
                             }
@@ -211,6 +221,7 @@
                         }
 
                         document.addEventListener('DOMContentLoaded', function () {
+                            
 
                             let tempArray = [];
                             //WE CAN DYNAMICALLY RENDER THIS JSON BUT HAVE TO WORK ON API 
@@ -317,10 +328,10 @@
                                 </div>
 
                                 <h4 class="card-text">TEST VIDEO</h4>
+                                <div onclick="restartAnimation('videoContainer8')">
+                                    Restart Animation
+                                </div>
                                 <div data-tilt class="text-center mt-2" data-tilt>
-                                    <div onclick="restartAnimation('videoContainer8')">
-                                        test
-                                    </div>
                                     <a class="inner-route" target="_blank" aria-label="Demo"
                                         href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
                                 </div>
@@ -357,6 +368,9 @@
                                 </div>
 
                                 <h4 class="card-text">TEST VIDEO</h4>
+                                <div onclick="restartAnimation('videoContainer7')">
+                                    Restart Animation
+                                </div>
                                 <div data-tilt class="text-center mt-2" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Demo"
                                         href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
