@@ -151,14 +151,14 @@
 
                                 if (overlay && video) {
                                     myContainers.push(containerId.toString());
-                                    overlay.style.animation = 'falling 1.5s forwards';
+                                    overlay.style.animation = 'falling 0.3s forwards';
                                     video.play();
 
 
                                     setTimeout(function () {
                                         overlay.style.display = 'none';
                                         video.controls = true;
-                                    }, 1500);
+                                    }, 300);
 
                                     // overlay.addEventListener('animationend', function () {
                                     //     overlay.style.display = 'none';
@@ -184,14 +184,14 @@
                                         myContainers.splice(myContainers.indexOf(containerId.toString()), 1);
 
                                         overlay.style.display = 'block';
-                                        overlay.style.animation = 'reAppear 1.5s';
+                                        overlay.style.animation = 'reAppear 0.3s';
                                         video.controls = false;
 
                                         setTimeout(function () {
 
                                             video.currentTime = 0;
                                             video.pause();
-                                        }, 1500);
+                                        }, 300);
 
                                     }
 
