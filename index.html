@@ -1427,7 +1427,50 @@
         </div>
     </section>
 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDZeoHUuRrIJA8UwFDaFMYnBJquwrAiYxo",
+          authDomain: "projectpen-3e422.firebaseapp.com",
+          projectId: "projectpen-3e422",
+          storageBucket: "projectpen-3e422.appspot.com",
+          messagingSenderId: "141639111126",
+          appId: "1:141639111126:web:668ab5b36875b7c2599477",
+          measurementId: "G-37D2WLFZZN"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
 
+
+<!-- 
+    You can deploy now or later. To deploy now, open a terminal window, then navigate to or create a root directory for your web app.
+
+Sign in to Google
+firebase login
+Initiate your project
+Run this command from your app's root directory:
+
+firebase init
+When you're ready, deploy your web app
+Put your static files (e.g., HTML, CSS, JS) in your app's deploy directory (the default is "public"). Then, run this command from your app's root directory:
+
+firebase deploy
+After deploying, view your app at projectpen-3e422.web.app
+
+Need help? Check out the Hosting docs
+
+
+ -->
 
     <script src="assets/js/animation.js"></script>
     <script src="assets/js/jquery-1.12.4.min.js"></script>
