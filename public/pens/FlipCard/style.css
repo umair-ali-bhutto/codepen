@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Work+Sans:wght@300;400&display=swap");
+
+/*custom properties */
+:root {
+  --clr-neutral-100: hsl(213, 5%, 26%);
+  --clr-neutral-400: hsl(213, 10%, 23%);
+  --clr-neutral-600: hsl(218, 13%, 17%);
+
+  --clr-primary-100: hsl(347, 47%, 94%);
+  --clr-primary-200: hsl(354, 37%, 89%);
+  --clr-primary-400: hsl(354, 62%, 79%);
+
+  --clr-secondary-100: hsl(184, 57%, 89%);
+  --clr-secondary-200: hsl(184, 57%, 89%);
+  --clr-secondary-400: hsl(189, 93%, 36%);
+
+  --gradient-direction: to bottom;
+
+  --ff-primary: "Work Sans", sans-serif;
+  --ff-secondary: "Abril Fatface", cursive;
+
+  --fs-400: 1rem;
+  --fs-500: 2.75rem;
+  --fs-600: 3rem;
+  --fs-700: 4.5rem;
+
+  --fw-300: 300;
+  --fw-400: 400;
+
+  --br: 1rem;
+
+  --level-one: translateZ(6rem);
+  --level-two: translateZ(4rem);
+  --level-three: translateZ(3rem);
+}
+
+/* reset */
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+h1,
+h2,
+h3,
+p,
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* utility classes */
+
+.flow > * + * {
+  margin-top: var(--spacer, 1.5rem);
+}
+
+.bg-main {
+  --bg-clr-one: var(--clr-secondary-100);
+  --bg-clr-two: var(--clr-primary-100);
+  background-image: linear-gradient(
+    var(--gradient-direction),
+    var(--bg-clr-one),
+    var(--bg-clr-two)
+  );
+}
+
+.bg-primary {
+  --bg-clr-one: var(--clr-primary-400);
+  --bg-clr-two: var(--clr-primary-200);
+  background-image: linear-gradient(
+    var(--gradient-direction),
+    var(--bg-clr-one),
+    var(--bg-clr-two)
+  );
+}
+
+.bg-secondary {
+  --bg-clr-one: var(--clr-secondary-400);
+  --bg-clr-two: var(--clr-secondary-200);
+  background-image: linear-gradient(
+    var(--gradient-direction),
+    var(--bg-clr-one),
+    var(--bg-clr-two)
+  );
+}
+
+/* general styles*/
+body {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-400);
+  line-height: 1.5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* typography */
+
+.card__title,
+.card__number {
+  font-family: var(--ff-secondary);
+  font-weight: 400;
+}
+
+.card__title {
+  font-size: var(--fs-700);
+  transform: var(--level-one);
+}
+
+.card__title--small {
+  font-size: var(--fs-600);
+}
+
+.card__subtitle,
+.card__body {
+  transform: var(--level-three);
+}
+
+.card__subtitle {
+  text-transform: uppercase;
+}
+
+.card__number {
+  font-size: var(--fs-500);
+  transform: var(--level-two);
+  margin-top: auto;
+}
+
+/* layout */
+
+.card {
+  width: 80%;
+  max-width: 25rem;
+  margin-inline: auto;
+  position: relative;
+}
+
+.card__content {
+  padding: 15em 5em;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 4s cubic-bezier(0.95, -0.41, 0.08, 1.37);
+}
+
+.card.rotation .card__content {
+  transform: rotateY(0.5turn);
+}
+
+.card__front,
+.card__back {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: var(--br);
+  padding: 5em 3em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  text-align: center;
+  color: var(--clr-neutral-400);
+}
+
+.card__front header {
+  --spacer: 0.95rem;
+}
+
+.card__back {
+  transform: rotateY(0.5turn);
+}
+
+.card__back li {
+  padding-block: 0.75em;
+}
+
+.card__back li + li {
+  border-top: 0.0625rem solid var(--clr-neutral-100);
+}
+
+.card__btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-400);
+  color: var(--clr-neutral-400);
+}
+
+.btn__effect,
+.btn__bg {
+  position: absolute;
+  inset: 0;
+  background: rgb(254, 200, 77);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.btn__effect {
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.95, -0.41, 0.08, 1.37),
+    opacity 0.4s ease-in-out;
+}
+
+.card__btn:hover .btn__effect {
+  transform: scale(1.5);
+  opacity: 0.3;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn__bg {
+  display: grid;
+  place-items: center;
+}
+
+.btn__bg.animate {
+  animation-name: bounce;
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.95, -0.41, 0.08, 1.37);
+}
+
+.btn__arrow {
+  transition: transform 0.4s ease-in-out;
+  transition-delay: 2s;
+}
+
+.btn__arrow.flip {
+  transform: rotate(-0.5turn);
+}

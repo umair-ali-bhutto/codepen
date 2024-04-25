@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layered Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    
+  <div class="clock" role="img" tabindex="0">
+    <div class="clock__layer clock__layer--img"></div>
+    <div class="clock__layer clock__layer--shade"></div>
+    <div class="clock__layer clock__layer--face">
+      <div class="clock__digits">
+        <span class="clock__digit-group" data-unit="h">12</span>
+        <span>:</span>
+        <span class="clock__digit-group" data-unit="m">00</span>
+        <small class="clock__digit-group clock__digit-group--small" data-unit="s">00</small>
+        <small class="clock__digit-group clock__digit-group--small" data-unit="ap">A</small>
+      </div>
+      <div class="clock__hand clock__hand--hr"></div>
+      <div class="clock__hand clock__hand--min"></div>
+      <div class="clock__ring"></div>
+    </div>
+    <div class="clock__layer clock__layer--profile">
+      <img class="clock__profile" src="https://assets.codepen.io/416221/profile1.jpg" alt="Profile icon" width="32" height="32"/>
+    </div>
+  </div>
+</body>
+
+<script src="script.js"></script>
+</html>
