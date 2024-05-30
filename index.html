@@ -300,7 +300,7 @@
                             const cardContainer = document.getElementById('test');
                             const cardDiv = document.createElement('div');
                             cardDiv.classList.add('col-md-3', 'col-sm-12', 'col-lg-3');
-                            cardDiv.innerHTML = `
+                            var html = `
     <div class="card-wrapper text-center">
         <span class="card-route" target="_blank" href="${data.demo}">
             <div id="videoContainer${i + 200}" class="video-container" onclick="startAnimation('videoContainer${i + 200}')">
@@ -319,12 +319,12 @@
             </div>`;
 
                             if (data.demo_allowed == "Y") {
-                                cardDiv.innerHTML += `<div data-tilt class="text-center mt-2" data-tilt>
+                                html += `<div data-tilt class="text-center mt-2" data-tilt>
                                     <a class="inner-route" target="_blank" aria-label="Demo" href="${data.demo}">Demo</a>
                                     </div>`;
                             }
 
-                            cardDiv.innerHTML += `<div data-tilt class="text-center mt-2" data-tilt>
+                            html += `<div data-tilt class="text-center mt-2" data-tilt>
                 <a class="inner-route" target="_blank" aria-label="Download" href="${data.download_path}"
                     download="${data.title}.zip">Download Zip</a>
             </div>
@@ -335,6 +335,7 @@
         </span>
     </div>  
     `;
+                            cardDiv.innerHTML = html;
 
                             cardContainer.appendChild(cardDiv);
                         }

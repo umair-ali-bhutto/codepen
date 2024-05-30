@@ -2,28 +2,39 @@
 <html lang="en">
 <!-- oncontextmenu="return false"  -->
 
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-436664993"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-436664993');
-    </script> -->
-    <!-- <script src="analytics.js"></script> -->
-    <!-- <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    
-    ga('create', 'UA-XXXXX-Y', 'auto');
-    ga('send', 'pageview');
-    </script> -->
-    <!-- End Google Analytics -->
+<!-- 
+        GENERATED THIS ASCII ART FROM https://patorjk.com/software/taag/
+        THANK YOU. https://patorjk.com/
+     -->
+<!-- 
+     ___  ___      _____ ______       ________      ___      ________         
+    |\  \|\  \    |\   _ \  _   \    |\   __  \    |\  \    |\   __  \        
+    \ \  \\\  \   \ \  \\\__\ \  \   \ \  \|\  \   \ \  \   \ \  \|\  \       
+     \ \  \\\  \   \ \  \\|__| \  \   \ \   __  \   \ \  \   \ \   _  _\      
+      \ \  \\\  \   \ \  \    \ \  \   \ \  \ \  \   \ \  \   \ \  \\  \|     
+       \ \_______\   \ \__\    \ \__\   \ \__\ \__\   \ \__\   \ \__\\ _\     
+        \|_______|    \|__|     \|__|    \|__|\|__|    \|__|    \|__|\|__|    
+                                                                              
+     ________      ___           ___         
+    |\   __  \    |\  \         |\  \        
+    \ \  \|\  \   \ \  \        \ \  \       
+     \ \   __  \   \ \  \        \ \  \      
+      \ \  \ \  \   \ \  \____    \ \  \     
+       \ \__\ \__\   \ \_______\   \ \__\    
+        \|__|\|__|    \|_______|    \|__|    
+                                             
+     ________      ___  ___      ___  ___      _________    _________    ________     
+    |\   __  \    |\  \|\  \    |\  \|\  \    |\___   ___\ |\___   ___\ |\   __  \    
+    \ \  \|\ /_   \ \  \\\  \   \ \  \\\  \   \|___ \  \_| \|___ \  \_| \ \  \|\  \   
+     \ \   __  \   \ \   __  \   \ \  \\\  \       \ \  \       \ \  \   \ \  \\\  \  
+      \ \  \|\  \   \ \  \ \  \   \ \  \\\  \       \ \  \       \ \  \   \ \  \\\  \ 
+       \ \_______\   \ \__\ \__\   \ \_______\       \ \__\       \ \__\   \ \_______\
+        \|_______|    \|__|\|__|    \|_______|        \|__|        \|__|    \|_______|
+                                                                                      
+        
+     -->
 
+<head>
 
     <meta name="google-site-verification" content="ZL9qKY_hMr-di-_PzXCRsvHIQ-ddQ1lpNwZvXVIvrb4" />
     <!-- META Tags -->
@@ -65,13 +76,11 @@
     <meta name="msapplication-TileImage" content="https://umair-ali-bhutto.github.io/assets/CodePenIcon/logo.png" />
 
 
+
     <title>Project Pen</title>
     <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
-
-    <!-- Google Analytics -->
-
 
 </head>
 
@@ -291,43 +300,42 @@
                             const cardContainer = document.getElementById('test');
                             const cardDiv = document.createElement('div');
                             cardDiv.classList.add('col-md-3', 'col-sm-12', 'col-lg-3');
-                            cardDiv.innerHTML = `
-                        <div class="card-wrapper text-center">
-                            <span class="card-route" target="_blank" href="pens/RotateClockCssOnlyNowJS/index.html">
+                            var html = `
+    <div class="card-wrapper text-center">
+        <span class="card-route" target="_blank" href="${data.demo}">
+            <div id="videoContainer${i + 200}" class="video-container" onclick="startAnimation('videoContainer${i + 200}')">
+                <div class="overlay" id="overlay">
+                    <img src="${data.thumbnail}" alt="Screenshot" class="screenshot">
+                    <div class="text-overlay">-- -- -- Click To Play -- -- --</div>
+                </div>
+                <video muted loop id="video">
+                    <source src="${data.video}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h4 class="card-text">${data.title}</h4>
+            <div onclick="restartAnimation('videoContainer${i + 200}')">
+                Testing Restart Animation
+            </div>`;
 
-                                <div id="videoContainer${i + 20}" class="video-container"
-                                    onclick="startAnimation('videoContainer${i + 20}')">
-                                    <div class="overlay" id="overlay">
-                                        <img src="https://umair-ali-bhutto.github.io/assets/ProjectPen/cs.jpg"
-                                            alt="Screenshot" class="screenshot">
-                                        <div class="text-overlay">-- -- -- Click To Play -- -- --</div>
+                            if (data.demo_allowed == "Y") {
+                                html += `<div data-tilt class="text-center mt-2" data-tilt>
+                                    <a class="inner-route" target="_blank" aria-label="Demo" href="${data.demo}">Demo</a>
+                                    </div>`;
+                            }
 
-                                    </div>
-                                    <video muted loop id="video">
-                                        <source
-                                            src="https://umair-ali-bhutto.github.io/assets/ProjectPen/bunny.mp4"
-                                            type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-
-                                <h4 class="card-text">${data.name + (i + 1)}</h4>
-                                <div data-tilt class="text-center mt-2" data-tilt>
-                                    <a class="inner-route" target="_blank" aria-label="Demo"
-                                        href="pens/RotateClockCssOnlyNowJS/index.html">Demo</a>
-                                </div>
-                                <div data-tilt class="text-center mt-2" data-tilt>
-                                    <a class="inner-route" target="_blank" aria-label="Download"
-                                        href="zipper-files/3dCube.zip" download="3dCube.zip">Download Zip</a>
-                                </div>
-                                <div data-tilt class="text-center mt-2 mb-2" data-tilt>
-                                    <a class="inner-route2" target="_blank" aria-label="Created By"
-                                        href="https://codepen.io/DawidKrajewski">Visit Creator</a>
-                                </div>
-                            </span>
-                        </div>
-                   
+                            html += `<div data-tilt class="text-center mt-2" data-tilt>
+                <a class="inner-route" target="_blank" aria-label="Download" href="${data.download_path}"
+                    download="${data.title}.zip">Download Zip</a>
+            </div>
+            <div data-tilt class="text-center mt-2 mb-2" data-tilt>
+                <a class="inner-route2" target="_blank" aria-label="Created By ${data.author}"
+                    href="${data.author_url}" data-author="${data.author}">Visit Creator</a>
+            </div>
+        </span>
+    </div>  
     `;
+                            cardDiv.innerHTML = html;
 
                             cardContainer.appendChild(cardDiv);
                         }
@@ -571,7 +579,7 @@
 
 
 
-                    <!-- <NO-TEST> NO TESTING ALLOWED IN THESE GROUNDS -->
+                    <!-- <NO-TEST> NO TESTING ALLOWED IN THESE GROUNDS BELOW -->
 
 
 
@@ -1435,7 +1443,7 @@
                         </div>
                     </div>
 
-                    <!-- </NO-TEST> NO TESTING ALLOWED IN THESE GROUNDS -->
+                    <!-- </NO-TEST> NO TESTING ALLOWED IN THESE GROUNDS ABOVE -->
 
 
 
@@ -1784,6 +1792,15 @@
                             <li><a href="https://codepen.io/Hyperplexed/pen/MWXBRBp">Sliding Image Track</a></li>
                             <li><a href="https://codepen.io/ainalem/full/QWGNzYm">About Us Pop-Out Effect</a></li>
 
+
+                            <li><a href="https://codepen.io/jkantner/pen/XWQLYRP">On OFF Button</a></li>
+                            <li><a href="https://codepen.io/kristen17/pen/pomgrKp">Card With Inverted Border</a></li>
+                            <li><a href="https://codepen.io/Pedro-Ondiviela/pen/jORgbbK">Patterns</a></li>
+                            <li><a href="https://codepen.io/jdillon/pen/PovYbLN">Silky smooth svg</a></li>
+                            <li><a href="https://codepen.io/cbolson/pen/OJGKdNJ">Css Only Navigation</a></li>
+                            <li><a href="https://codepen.io/Adir-SL/pen/ZENzGJX">Motion blur js</a></li>
+                            <li><a href="https://codepen.io/Juxtopposed/pen/vYMMRyR">elastic div</a></li>
+
                         </ol>
 
                         <h3>YOUTUBE CODE</h3>
@@ -1815,7 +1832,7 @@
                                     Library</a></li>
                         </ol>
 
-                        
+
                     </div>
 
 
@@ -1887,6 +1904,12 @@
 
 </body>
 <!-- Website Made by Umair Ali Bhutto -->
+
+<!-- 
++-+ +-+ +-+ +-+ +-+   +-+ +-+ +-+   +-+ +-+ +-+ +-+ +-+ +-+
+ |U| |M| |A| |I| |R|   |A| |L| |I|   |B| |H| |U| |T| |T| |O|
++-+ +-+ +-+ +-+ +-+   +-+ +-+ +-+   +-+ +-+ +-+ +-+ +-+ +-+
+ -->
 
 
 </html>
