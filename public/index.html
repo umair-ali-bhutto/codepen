@@ -324,9 +324,11 @@
                                     </div>`;
                             }
 
+
+                            var downloadTitle = data.title.includes('<br>') ? data.title.replace(/<br>/g, ' ') : data.title;
                             html += `<div data-tilt class="text-center mt-2" data-tilt>
                 <a class="inner-route" target="_blank" aria-label="Download" href="${data.download_path}"
-                    download="${data.title}.zip">Download Zip</a>
+                    download="${downloadTitle}.zip">Download Zip</a>
             </div>
             <div data-tilt class="text-center mt-2 mb-2" data-tilt>
                 <a class="inner-route2" target="_blank" aria-label="Created By ${data.author}"
