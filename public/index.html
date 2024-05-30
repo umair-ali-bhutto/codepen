@@ -186,9 +186,9 @@
                                 if (overlay && video) {
                                     myContainers.push(containerId.toString());
                                     overlay.style.animation = 'falling 0.3s forwards';
+                                    video.currentTime = 0;
                                     video.play();
-
-
+                                    
                                     setTimeout(function () {
                                         overlay.style.display = 'none';
                                         video.controls = true;
@@ -280,9 +280,6 @@
                                     const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
 
                                     videoContainers.forEach(container => {
-                                        const video = container.querySelector('video');
-                                        video.currentTime = 0;
-
                                         observer.observe(container);
                                     });
 
