@@ -280,6 +280,9 @@
                                     const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
 
                                     videoContainers.forEach(container => {
+                                        const video = container.querySelector('video');
+                                        video.currentTime = 0;
+
                                         observer.observe(container);
                                     });
 
