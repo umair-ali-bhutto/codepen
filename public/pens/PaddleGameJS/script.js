@@ -12,7 +12,7 @@ let ballX = Math.random() * (gameContainer.clientWidth - ball.clientWidth);
 let ballY = 0;
 let ballSpeedY = 2;
 let score = 0;
-let highScore = localStorage.getItem('highScore') || 0;
+let highScore = sessionStorage.getItem('highScore') || 0;
 
 highScoreDisplay.textContent = `High Score: ${highScore}`;
 
@@ -44,7 +44,7 @@ function updateBall() {
             ballSpeedY += 0.5;
             scoreDisplay.textContent = `Score: ${score}`;
             if (score > highScore) {
-                localStorage.setItem('highScore', score);
+                sessionStorage.setItem('highScore', score);
             }
             setTimeout(() => { paddle.style.backgroundColor = '#ff6347'; }, 100);
         } else {
@@ -88,7 +88,7 @@ let gameRunning = false;
 
 startButton.addEventListener('click', () => {
     if (!gameRunning) {
-        highScore = localStorage.getItem('highScore') || 0;
+        highScore = sessionStorage.getItem('highScore') || 0;
         gameRunning = true;
         gameContainer.style.cursor = 'none';
         gameOverMessage.style.display = 'none';
