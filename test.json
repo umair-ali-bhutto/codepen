@@ -2,6 +2,7 @@
     {
         "id":1,
         "title":"Css Ball Switch<br>(Toggle Switch)",
+        "description":"TEST DESCRIPTION WILL NEED TO TEST MORE",
         "demo_allowed":"Y",
         "demo":"pens/CssBallSwitch/index.html",
         "download_path":"zipper-files/CssBallSwitch.zip",
@@ -13,6 +14,7 @@
     {
         "id":2,
         "title":"Spell Caster Game",
+        "description":"TEST DESCRIPTION WILL NEED TO TEST MORE",
         "demo_allowed":"Y",
         "demo":"pens/SpellCaster/index.html",
         "download_path":"zipper-files/SpellCaster.zip",
@@ -24,6 +26,7 @@
     {
         "id":3,
         "title":"Snow Fall Only Linux",
+        "description":"TEST DESCRIPTION WILL NEED TO TEST MORE",
         "demo_allowed":"N",
         "demo":"",
         "download_path":"zipper-files/Snowjob.zip",

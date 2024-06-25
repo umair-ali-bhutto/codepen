@@ -1,3 +1,26 @@
+/* Fonts */
+@font-face {
+  font-family: barlow-extra-bold;
+  src: url(fonts/Barlow-ExtraBold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: barlow-light;
+  src: url(fonts/Barlow-ExtraLight.ttf);
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: barlow-medium;
+  src: url(fonts/Barlow-Medium.ttf);
+  font-display: swap;
+
+}
+
+/* Fonts */
+
 /* scroll bar for chrome */
 *::-webkit-scrollbar {
   width: 0.5em;
@@ -32,8 +55,6 @@
 ::before {
   box-sizing: border-box
 }
-
-
 
 
 
@@ -112,10 +133,6 @@ h4 {
   font-size: 1.5rem
 }
 
-
-
-
-
 .container-fluid {
   width: 100%;
   padding-right: 15px;
@@ -172,6 +189,10 @@ h4 {
 }
 
 
+.mt-1 {
+  margin-top: 0.5rem !important
+}
+
 .mt-2 {
   margin-top: 1rem !important
 }
@@ -210,29 +231,6 @@ h4 {
 
 /* CUSTOM CSS */
 
-
-/* Fonts */
-@font-face {
-  font-family: barlow-extra-bold;
-  src: url(fonts/Barlow-ExtraBold.ttf);
-  font-display: swap;
-}
-
-@font-face {
-  font-family: barlow-light;
-  src: url(fonts/Barlow-ExtraLight.ttf);
-  font-display: swap;
-
-}
-
-@font-face {
-  font-family: barlow-medium;
-  src: url(fonts/Barlow-Medium.ttf);
-  font-display: swap;
-
-}
-
-/* Fonts */
 
 .card-image {
 
@@ -302,6 +300,15 @@ h4 {
   box-shadow: rgb(123, 123, 123) 0px 20px 10px -11px;
 }
 
+
+
+
+
+.card-description {
+  text-align: center;
+  font-family: barlow-light;
+  font-size: smaller;
+}
 
 
 
