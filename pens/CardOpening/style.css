@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/*To center main-container*/
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*This is the container for both heading and the card*/
+.main-container{
+  /*contains duration for the rotational transition of the paper also for the translational transition of the card-container itself*/
+  --transition-duration: 0.75s; 
+  height: 250px;
+  width: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*not only the card should flip, but the middle should move to the center as well*/
+.card-container{
+  height: 150px;
+  width: 100px;
+  position: relative;
+  perspective: 1000px;
+  transition: transform var(--transition-duration) linear;
+}
+
+/*On the basis of card-contaier, the paper and on the basis of paper, the pages are positioned*/
+.paper{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform var(--transition-duration) linear;
+  transform-origin: left;
+}
+/*setting paper-1 z-index in front, else, by default paper-2 exists on front*/
+.paper-1{
+  z-index: 1;
+}
+
+.page{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+/*contains the z-index and background for individual pages*/
+.page-1{
+  z-index: 1;
+  background: url("https://w0.peakpx.com/wallpaper/272/80/HD-wallpaper-stewie-griffin-ixpap-in-2022-stewie-griffin-family-guy-stewie-brian-family-guy.jpg") center/cover;
+}
+.page-2{
+  z-index: 0;
+  background: url("https://e1.pxfuel.com/desktop-wallpaper/249/795/desktop-wallpaper-brian-griffin-family-guy-for-iphone-5-backgrounds.jpg") center/cover;
+  transform: rotateY(180deg);
+}
+.page-3{
+  z-index: 1;
+  background: url("https://i.pinimg.com/originals/f7/74/e3/f774e3cb81a7b221b4d664a0a8c17949.jpg") center/cover;
+}
+.page-4{
+  z-index: 0;
+  background: url("https://via.placeholder.com/100x150?text=Page-4");
+  transform: rotateY(180deg);
+}
+
+/*Hover Effect - Rotation and Translation*/
+.card-container:hover .paper-1{
+  transform: rotateY(-160deg);
+}
+.card-container:hover .paper-2{
+  transform: rotateY(-20deg);
+}
+.card-container:hover{
+  transform: translateX(50%);
+}
+

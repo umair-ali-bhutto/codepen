@@ -1,0 +1,73 @@
+@font-face {
+  /* 
+Bandeins Strange 
+http://type.bandeins.de/
+This free font is for demonstration purposes only. You may not distribute, rent, sell, give away, publicly or privately share any modified or unmodified version of the font. Special permission has been granted to crosslink to it for demo purposes only. You must obtain an appropriate license at <http://type.bandeins.de/> before linking to this font or using it in any other context.
+*/
+  font-family: 'Bandeins-Strange';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/61488/BandeinsStrangeVariableGX.ttf') format('truetype');
+  font-stretch: 100% 900%;
+  font-weight: 200 800;
+  font-display: block;
+}
+
+:root {
+  --fontSize: 4;
+}
+
+html {
+box-sizing: border-box;
+}
+
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+html, body {
+width: 100%;
+height: 100%;
+}
+
+body {
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 1000vh;
+  background: black;
+}
+
+.stage {
+  display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+.tube {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  perspective: 100vw;
+}
+
+.tube__inner {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: 'Bandeins-Strange';
+  font-size: calc(var(--fontSize) * 1vw);
+  font-stretch: 800%;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  transform-style: preserve-3d;
+}

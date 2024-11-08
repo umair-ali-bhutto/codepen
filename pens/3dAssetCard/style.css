@@ -1,0 +1,449 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/opensans/v36/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4n.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-stretch: normal;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/opensans/v36/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4n.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-stretch: normal;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/opensans/v36/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1y4n.ttf) format('truetype');
+  }
+  /* VARIABLES */
+  :root {
+    --black: #000000;
+    --white: #F8F8F8;
+    --grey-2: #DDDDDD;
+    --highlight-2: #2483C5;
+    --yellow-2: #FBBF24;
+    --yellow-3: #D97706;
+    --green-2: #059669;
+    --red-2: #EF4444;
+    --blue-2: #3B82F6;
+    --cardBackgroundColor: var(--grey-2);
+    --cardHighlightColor: var(--highlight-2);
+    --cardBorderRadius: 0.5rem;
+    --cardThumbnailHeight: 150px;
+    --cardRatingColor: var(--yellow-2);
+    --cardStatusApproved: var(--green-2);
+    --cardStatusPending: var(--yellow-2);
+    --cardStatusRejected: var(--red-2);
+  }
+  /* RESETS */
+  * {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 500px;
+  }
+  /* CARD */
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 200px;
+    width: 100%;
+    border-top-left-radius: var(--cardBorderRadius);
+    border-top-right-radius: var(--cardBorderRadius);
+    transform-style: preserve-3d;
+    transition: transform 0.2s linear;
+  }
+  .card:hover .card__checkbox {
+    transform: translateZ(27px);
+  }
+  .card:hover .card__checkbox label {
+    opacity: 0.9;
+  }
+  .card:hover .card__info {
+    transform: translateY(-35px) translateZ(26px);
+  }
+  .card:hover .card__thumbnail {
+    transform: translateZ(25px);
+  }
+  .card:hover .card__thumbnail::before {
+    opacity: 1;
+  }
+  .card:hover .card__options {
+    transform: translateZ(24px);
+    opacity: 1;
+  }
+  .card:hover .card__status span::before {
+    opacity: 1;
+  }
+  .card:hover .card__rating label {
+    opacity: 1;
+  }
+  .card:hover .card__rating label svg:last-child {
+    opacity: 0.3;
+  }
+  .card svg {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .card .card__info-icon {
+    margin-right: 0.8rem;
+  }
+  /* CHECKBOX */
+  .card__checkbox {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    user-select: none;
+    transform: translateZ(2px);
+    transition: transform 0.2s linear;
+  }
+  .card__checkbox label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    cursor: pointer;
+    opacity: 0.5;
+    color: var(--grey-2);
+    border-radius: var(--cardBorderRadius);
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.3);
+    background-color: var(--white);
+    transition: transform 0.2s linear, opacity 0.2s linear, color 0.2s linear;
+  }
+  .card__checkbox label:hover {
+    transform: scale(1.1);
+  }
+  .card__checkbox label:active {
+    transform: scale(1);
+  }
+  .card__checkbox input[type="checkbox"] {
+    display: none;
+  }
+  .card__checkbox input[type="checkbox"]:checked + label {
+    opacity: 1;
+    color: var(--blue-2);
+  }
+  /* THUMBNAIL */
+  .card__thumbnail {
+    position: relative;
+    cursor: pointer;
+    background-color: var(--cardBackgroundColor);
+    height: var(--cardThumbnailHeight);
+    user-select: none;
+    border-radius: var(--cardBorderRadius);
+    transition: transform 0.2s linear;
+  }
+  .card__thumbnail img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: var(--cardBorderRadius);
+    transition: filter 0.2s linear;
+  }
+  .card__thumbnail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--cardBorderRadius);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  }
+  input[type="checkbox"].card__thumbnail-check {
+    display: none;
+  }
+  input[type="checkbox"].card__thumbnail-check:checked + .card__thumbnail {
+    transform: translateZ(250px);
+  }
+  /* INFO */
+  .card__info {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 0.5rem;
+    transition: transform 0.2s linear;
+    transform-style: preserve-3d;
+  }
+  .card__info:hover ~ .card__thumbnail img,
+  .card__info:hover ~ .card__checkbox {
+    filter: blur(1px) brightness(0.4);
+  }
+  .card__info:hover .card__status {
+    filter: blur(1px) brightness(0.8);
+  }
+  .card__info-icon {
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  /* STATUS */
+  .card__status {
+    position: relative;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding-left: 0.5rem;
+    transition: transform 0.2s ease;
+  }
+  .card__status:hover {
+    filter: blur(0px) brightness(1) !important;
+    transform: translateX(8px) translateY(-10px) translateZ(40px);
+  }
+  .card__status:hover label {
+    opacity: 0.8;
+    pointer-events: all;
+  }
+  .card__status:hover + .card__rating {
+    filter: blur(1px) brightness(0.5);
+  }
+  .card__status-icon {
+    position: absolute;
+  }
+  .card__status-icon label {
+    position: absolute;
+    padding-left: 2rem;
+    cursor: pointer;
+    font-weight: 700;
+    opacity: 0;
+    line-height: 1.5em;
+    pointer-events: none;
+    user-select: none;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.7), 0 0 0.4rem currentColor;
+    transition: opacity 0.2s linear, font-size 0.1s linear;
+  }
+  .card__status-icon label:hover {
+    opacity: 1;
+  }
+  .card__status-icon label:active a {
+    display: inline-block;
+    transform: scale(1.1);
+  }
+  .card__status-icon span {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: currentColor;
+    transition: transform 0.1s linear;
+  }
+  .card__status-icon span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.2s linear;
+  }
+  .card__status-icon input[type="radio"] {
+    display: none;
+  }
+  .card__status-icon input[type="radio"]:checked + span {
+    opacity: 1;
+  }
+  .card__status-icon input[type="radio"]:active + span {
+    filter: blur(1px);
+    transform: scale(1.5);
+  }
+  .card__status-icon--approved {
+    color: var(--cardStatusApproved);
+  }
+  .card__status-icon--approved label {
+    transform: translateY(-3em);
+  }
+  .card__status-icon--rejected {
+    color: var(--cardStatusRejected);
+  }
+  .card__status-icon--rejected label {
+    transform: translateY(-1.5em);
+  }
+  .card__status-icon--pending {
+    color: var(--cardStatusPending);
+  }
+  .card__status-icon--pending label {
+    transform: translateY(0em);
+  }
+  /* RATING */
+  .card__rating {
+    display: flex;
+    flex-direction: row-reverse;
+    color: var(--grey-2);
+    transition: transform 0.2s ease;
+  }
+  .card__rating:hover {
+    transform: translateX(8px) translateY(-10px) translateZ(40px) scale(1.1);
+  }
+  .card__rating label {
+    position: relative;
+    cursor: pointer;
+    opacity: 0;
+    transition: transform 0.1s linear;
+  }
+  .card__rating label svg:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(2px);
+    opacity: 0;
+    z-index: -1;
+  }
+  .card__rating label svg:last-child path {
+    fill: black;
+  }
+  .card__rating input[type="radio"] {
+    display: none;
+  }
+  .card__rating:hover input[type="radio"]:checked ~ label {
+    color: var(--yellow-3);
+  }
+  .card__rating input[type="radio"]:checked ~ label {
+    opacity: 1;
+    color: var(--cardRatingColor);
+  }
+  .card__rating label:hover,
+  .card__rating label:hover ~ label {
+    color: var(--cardRatingColor) !important;
+  }
+  .card__rating input[type="radio"]:active + label {
+    transform: scale(0.7);
+  }
+  /* OPTIONS */
+  .card__options {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    color: var(--white);
+    opacity: 0;
+    transition: transform 0.2s linear, opacity 0.3s linear;
+    transform-style: preserve-3d;
+    z-index: 100;
+  }
+  .card__options.card__options:hover {
+    transform: translateZ(50px) translateY(-10px);
+  }
+  .card__options.card__options:hover .card__options-background {
+    filter: blur(0);
+    opacity: 0.8;
+  }
+  .card__options.card__options:hover ~ * {
+    filter: blur(2px);
+    transform: translateZ(10px);
+    opacity: 0.8;
+  }
+  .card__options.card__options:hover ~ *.card__info {
+    transform: translateY(-35px) translateZ(11px);
+  }
+  .card__options.card__options:hover ~ *.card__checkbox {
+    transform: translateZ(11px);
+  }
+  .card__options a {
+    position: relative;
+    color: inherit;
+    transition: transform 0.2s linear;
+  }
+  .card__options a:hover {
+    outline: none;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    transform: scale(1.8) translateZ(60px) translateY(-5px);
+  }
+  .card__options a:hover svg:last-child {
+    opacity: 0.5;
+  }
+  .card__options a:hover ~ .card__options-title {
+    opacity: 1;
+  }
+  .card__options a:active {
+    transform: scale(1.4) translateZ(60px) translateY(-5px);
+  }
+  .card__options a svg:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: -1;
+    filter: blur(1px);
+    opacity: 0;
+    transition: opacity 0.2s linear;
+  }
+  .card__options a span {
+    position: absolute;
+    width: 200px;
+    font-size: 1.2rem;
+    transform: translateY(-1em);
+    text-transform: uppercase;
+  }
+  .card__options > a + a {
+    margin-left: 1rem;
+  }
+  .card__options .card__option:last-of-type {
+    margin-left: auto;
+  }
+  .card__options .card__options-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: var(--cardBorderRadius);
+    z-index: -1;
+    filter: blur(2px);
+    opacity: 0.5;
+    transition: filter 0.2s linear, opacity 0.2s linear;
+  }
+  .card__options .card__options-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-4rem) translateZ(50px);
+    opacity: 0;
+    pointer-events: none;
+    text-shadow: 0 0 5px black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    transition: opacity 0.2s linear;
+  }
+  /* GENERIC */
+  svg path {
+    transition: fill 0.2s linear;
+  }
+  

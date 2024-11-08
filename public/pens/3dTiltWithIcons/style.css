@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+:root {
+  --blue: #3E7CB1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+  color: var(--blue);
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  perspective: 500px;
+}
+
+/* #logo-container */
+#logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 100px;
+  transition: filter 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+/* h1 */
+#logo-container h1 {
+  position: relative;  
+  font-size: 3.4rem; 
+  font-weight: 300;
+  z-index: 0;
+  transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+}
+
+#logo-container h1 strong {
+  font-weight: 400;
+}
+
+/* .line */ 
+#logo-container .line {
+  position: relative;   
+  display: block;
+  height: 2px;
+  border-top: 1.5px solid var(--blue);
+  background-color: white;
+  margin-top: 1rem;
+  z-index: 5;
+  transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+}
+
+/* h2 */
+#logo-container h2 {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+  z-index: 10;
+  transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+}
+
+/* .contact */
+#logo-container .contact {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  transform-style: preserve-3d;
+  font-size: 1.8rem;
+}
+
+#logo-container .contact a {
+  color: var(--blue);
+  transition: filter 0.3s ease, transform .3s ease, color .3s ease;
+  position: relative;  
+}
+
+#logo-container .contact a:hover {
+  transform: translateY(-10px) scale(2.2) translateZ(150px);
+  z-index: 10000;
+}
+
+#logo-container .contact a + a {
+  margin-left: 5px;
+}
+
+/* .text */
+#logo-container .text {
+  position: relative;
+  transform: translateY(15px) translateZ(150px);
+  font-size: 3.4rem;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.blurred {
+  filter: blur(2px);
+  opacity: 0.6;
+}

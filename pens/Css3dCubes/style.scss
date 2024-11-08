@@ -1,0 +1,64 @@
+html, body {
+	height: 100%;
+  }
+  
+  body {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .cube-wrapper {
+	width: 30%;
+  }
+  
+  .cube {
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
+	transform-origin: 50% 50%;
+	transform-style: preserve-3d;
+	transform: rotate3d(1, 1, 1, 50deg);
+	transition: 2s linear;
+  }
+  
+  .item {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2em;
+	color: #fbfbfb;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: 6px solid #ccc;
+	background: rgba(0, 0, 0, .3);
+	transform-origin: 50% 50%;
+  }
+  
+  .item1 {transform: translate(-50%, -50%) rotateY(90deg) translateX(50%) rotateY(-90deg);}
+  .item2 {transform: translate(0%, -50%) rotateY(90deg);}
+  .item3 {transform: translate(-100%, -50%) rotateY(-90deg);}
+  .item4 {transform: translate(-50%, 0%) rotateX(90deg);}
+  .item5 {transform: translate(-50%, -100%) rotateX(-90deg);}
+  .item6 {transform: translate(-50%, -50%) rotateY(90deg) translateX(-50%) rotateY(-90deg);}
+  
+  .cube:nth-child(2) {
+	margin: -25% 0 0 -35%;
+	
+	.item {
+	  background: rgba(100, 255, 100, .3);
+	}
+  }
+  
+  .cube:nth-child(3) {
+	margin: -125% 0 0 35%;
+	
+	.item {
+	  background: rgba(100, 0, 255, .3);
+	}
+  }

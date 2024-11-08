@@ -1,0 +1,77 @@
+body {
+  background-image: radial-gradient( circle farthest-corner at 50.4% 50.5%,  rgba(248,251,10,1) 0%, rgba(248,47,47,1) 90% );
+}
+
+img {
+width: 100%;
+border: 6px solid #ecc;
+}
+
+.wrap {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+perspective: 1000px;
+perspective-origin: 50% 50%;
+}
+
+.cube {
+transform-style: preserve-3d;
+width: 200px;
+height: 200px;
+margin: auto;
+animation: rotate 15s ease-in-out 0.3s infinite;
+}
+
+.cube img {
+position: absolute;
+filter: saturate(1.2);
+opacity: 0.9;
+}
+
+.cube img:nth-child(1) {
+transform: rotateY(0deg) translateZ(106px);
+}
+
+.cube img:nth-child(2) {
+transform: rotateY(90deg) translateZ(106px);
+}
+
+.cube img:nth-child(3) {
+transform: rotateY(180deg) translateZ(106px);
+}
+
+.cube img:nth-child(4) {
+transform: rotateY(-90deg) translateZ(106px);
+}
+
+.cube img:nth-child(5) {
+transform: rotateX(90deg) translateZ(106px);
+}
+
+.cube img:nth-child(6) {
+transform: rotateX(-90deg) translateZ(106px);
+}
+
+@keyframes rotate {
+from,
+to {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+15% {
+  transform: rotateY(-90deg);
+}
+30% {
+  transform: rotateY(-90deg) rotateZ(90deg);
+}
+51% {
+  transform: rotateY(-180deg) rotateZ(90deg);
+}
+66% {
+  transform: rotateY(-270deg) rotateX(90deg);
+}
+82% {
+  transform: rotateX(90deg);
+}
+}

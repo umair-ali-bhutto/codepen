@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <body class="bg-main">
+    <div class="card">
+      <div class="card__content">
+        <div class="card__front bg-primary">
+          <header class="flow">
+            <h2 class="card__title">Hello World!</h2>
+            <p class="card__subtitle">Click button to flip the card</p>
+          </header>
+          <p class="card__number">01</p>
+        </div>
+        <div class="card__back flow bg-secondary">
+          <header>
+            <h2 class="card__title card__title--small">Details</h2>
+          </header>
+          <div class="card__body">
+            <ul role="list">
+              <li style="font-size: 2rem;">UMAIR ALI BHUTTO</li>
+              <li style="font-size: 3rem;"> &#128515;</li>
+             
+            </ul>
+          </div>
+          <div class="card__number">02</div>
+        </div>
+      </div>
+  
+      <button class="card__btn">
+        <div class="btn__effect"></div>
+        <div class="btn__bg">
+          <i class="btn__arrow fas fa-share"></i>
+        </div>
+      </button>
+    </div>
+  
+    <script src="js/main.js"></script>
+  </body>
+  
+  </html>
+</body>
+<script src="script.js"></script>
+</html>
