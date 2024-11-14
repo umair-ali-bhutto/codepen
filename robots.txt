@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /public/
+Disallow: /zipper-files/
+
+Sitemap: https://umair-ali-bhutto.github.io/codepen/sitemap.xml
